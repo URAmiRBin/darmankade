@@ -1,24 +1,26 @@
+/* ================== MISC AND UTILS ================== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'vazir', Arial, sans-serif;
-    font-weight:normal;
-    font-style:normal;
     background-color: #FAFAFA;
+    direction: rtl;
 }
-
-.fa {
-    font-size: 18px;
-}
-
 
 .content {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3px;
 }
   
 .container {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: block;
 }
 
@@ -26,14 +28,42 @@ body {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    align-items: center;
 }
+
+.rounded {
+    border-radius: 10%;
+}
+
+.col-2 {
+    width: 66.66%;
+}
+
+.col-8 {
+    width: 16.65%;
+}
+
+.bottom-offset {
+    margin-bottom: 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.wide {
+    flex: 0 0 100%;
+}
+
+/* ================== NAVBAR ================== */
 
 .navmenu {
     padding-top: 20px;
     width : 85%;
 }
-
 
 .navmenu ul {
     list-style-type: none;
@@ -76,11 +106,222 @@ body {
     float: right;
 }
 
-.rounded {
-    border-radius: 10%;
+/* TODO: SEARCH */
+
+.searchbar-bg {
+    background-color: cyan;
+    border-radius: 50px;
+    background-image: url(/images/doodle.png);
+    height: 300px;
+    margin-top: 50px;
+    text-align: center;
 }
 
-@font-face {
-    font-family: 'vazir';
-    src: url("/fonts/Vazir.woff") format("woff")
+
+/* ================== FOOTER ================== */
+
+footer {
+    background-color: #1780DF;
+    max-width: 100%;
+    display: flex;
+    margin-top: 2%;
+    color: white;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 1% 10%;
+    margin: 0% 2%;
+}
+
+
+footer  p {
+    color: white;
+}
+
+/* FOOTER LINKS */
+
+.footer-links {
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+.footer-links li {
+    border-top: 1px solid #FAFAFA;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links li:hover {
+    background-color: white;
+}
+
+.footer-links li:hover a {
+    color:#1780DF;
+}
+
+.social-links {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.social-links li {
+    list-style-type: none;
+    padding: 0 1%;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+.footer-vertical-line {
+    height: 20vh;
+    width: 1px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+/* ENAMAD */
+
+.e-namad {
+    display: flex;
+    justify-content: center;
+}
+
+.e-namad .card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 2px 10px;
+    width: 95px;
+    height: 110px;
+}
+
+.e-namad .card img {
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER FORM */
+
+.footer-form {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#footer-fname, #footer-lname {
+    width: 50%;
+}
+
+#footer-email {
+    width: 100%;
+}
+
+.footer-form input {
+    border-radius: 10px;
+    border-color: white;
+    padding: 10px 10px;
+    margin: 2px 1px;
+}
+
+input[type=text]:focus {
+    outline: none;
+    box-shadow: 3px 1px gray;
+}
+
+input[type=text] {
+    color: grey;
+}
+
+/* HOVER BUTTON */
+
+.hover-box a:hover, a {
+    text-decoration: none!important;
+}
+
+.hover-box .btn {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #FB815E;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 9px 0;
+    transition: all 0.3s;
+    margin: 10px 0px;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.hover-box .btn .btn-icon {
+    background-color: #FFBBBB;
+    width: 15%;
+    height: 45px;
+    float: right;
+    position: absolute;
+    border-radius: 20px 10px 10px 20px;;
+    right: 0px;
+    top: 0px;
+    transition: all 0.6s;
+}
+
+.name-descripeion {
+    position: relative;
+    z-index: 9999;
+}
+
+.hover-box .btn:hover .btn-icon {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.hover-box .btn:hover .btn-icon::after {
+    display: none;
+    opacity: 0.1;
+}
+
+.btn-icon i {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #fff;
+}
+
+.hover-box .btn:hover {
+    color: #fff!important;
+}
+
+/* COPYRIGHT */
+
+#copyright-left {
+    width:50%;
+    direction: ltr;
+}
+
+#copyright-right {
+    width: 50%;
+}
+
+#copyright {
+    display: flex;
+    max-width: 100%;
+    background-color: #FAFAFA;
+}
+
+.svg-fill-red {
+    color: #fa5a2c;
+    fill: #fa5a2c;
+    vertical-align: middle;
 }

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'vazir';
+    src: url("/fonts/Vazir.woff") format("woff")
+}
+
+body {
+    font-family: 'vazir', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+
+input {
+    font-family: 'vazir';
+    src: url("/fonts/Vazir.woff") format("woff")
+}
+
+.f-16 {
+    font-size: .9rem;
+}
+
+.fa {
+    font-size: 18px;
+}
