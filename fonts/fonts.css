@@ -9,7 +9,7 @@ body {
     font-style:normal;
 }
 
-input {
+input, button {
     font-family: 'vazir';
     src: url("/fonts/Vazir.woff") format("woff")
 }
@@ -20,4 +20,12 @@ input {
 
 .fa {
     font-size: 18px;
+}
+
+.f-32 {
+    font-size: 2.5rem;
+}
+
+.gray {
+    color: gray;
 }
