@@ -50,6 +50,10 @@ body {
     margin-bottom: 15px;
 }
 
+.ltr {
+    direction: ltr;
+}
+
 .flex {
     display: flex;
 }
@@ -64,6 +68,15 @@ body {
 
 .white-text {
     color: white;
+}
+
+.link {
+    text-decoration: none;
+    color: #0078D7;
+}
+
+.link:hover {
+    color: orangered;
 }
 
 /* ================== NAVBAR ================== */
@@ -114,7 +127,7 @@ body {
     float: right;
 }
 
-/* SEARCH */
+/* ================== SEARCH ================== */
 
 .searchbar-bg {
     background-size: cover;
@@ -213,15 +226,6 @@ body {
     display: flex;
 }
 
-#suggestion-header a {
-    text-decoration: none;
-    color: #0078D7;
-}
-
-#suggestion-header a:hover {
-    color: orangered;
-}
-
 #suggestion-header-texts {
     padding-top: .5rem;
     text-align: right;
@@ -306,6 +310,49 @@ body {
     outline: none;
 }
 
+/* ================== SPEC CARDS ================== */
+
+.spec-card {
+    background-color: white;
+    border: 1px solid rgb(0,0,0,.25);
+    border-radius: 10px;
+    width: 120px;
+    height: 150px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.spec-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img-holder {
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: flex;
+    margin: 10px 10px 20px 10px;
+    height: 85px;
+    border-radius: 10px;
+}
+
+.card-img {
+    vertical-align: middle;
+}
+
+.card-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.space-even-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 /* ================== FOOTER ================== */
 
@@ -313,7 +360,7 @@ footer {
     background-color: #1780DF;
     max-width: 100%;
     display: flex;
-    margin-top: 2%;
+    margin-top: 10%;
     color: white;
 }
 
