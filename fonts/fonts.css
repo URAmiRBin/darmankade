@@ -26,6 +26,18 @@ input, button {
     font-size: 2.5rem;
 }
 
+.f-24 {
+    font-size: 1.8rem;
+}
+
+.f-18 {
+    font-size: 1.2rem;
+}
+
+.f-bold {
+    font-weight: bold;
+}
+
 .gray {
     color: gray;
 }
