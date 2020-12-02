@@ -46,6 +46,14 @@ body {
     width: 50%;
 }
 
+.col-5 {
+    width: 41.6%
+}
+
+.col-7 {
+    width: 58.4%;
+}
+
 .bottom-offset {
     margin-bottom: 15px;
 }
@@ -432,6 +440,67 @@ body {
 }
 
 
+/* ================== DOWNLOAD ================== */
+#download {
+    margin-top: 10%;
+}
+
+.download-img {
+    width: 100%;
+}
+
+.auto-margin {
+    display: block;
+    margin: auto;
+}
+
+.download-stores {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+.download-stores img {
+    margin: 0 10px 0 10px;
+    height: 30px;
+}
+
+.download-app {
+    padding-top: 8%;
+}
+
+.download-app p {
+    margin-top: 20px;
+}
+
+.app-form {
+    display: flex;
+}
+
+.app-form .hover-box {
+    min-width: 150px;
+}
+
+.app-form input {
+    margin: 9px 0 9px 5px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    transition: 0.3s;
+    padding-right: 5px;
+}
+
+.app-form input:focus {
+    border: 1px solid #0078D7;
+}
+
+.app-form .hover-btn-descr {
+    padding-right: 20px;
+}
+
+.app-form .hover-box .hover-btn .hover-btn-icon {
+    width: 30%;
+}
 
 
 /* ================== FOOTER ================== */

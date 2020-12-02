@@ -1,17 +1,22 @@
 @font-face {
-    font-family: 'vazir';
-    src: url("/fonts/Vazir.woff") format("woff")
+    font-family: Vazir;
+    src: url('Vazir-Regular.eot');
+    src: url('Vazir-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Vazir-Regular.woff2') format('woff2'),
+         url('Vazir-Regular.woff') format('woff'),
+         url('Vazir-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-    font-family: 'vazir', Arial, sans-serif;
+    font-family: Vazir, Arial, sans-serif;
     font-weight:normal;
     font-style:normal;
 }
 
 input, button {
-    font-family: 'vazir';
-    src: url("/fonts/Vazir.woff") format("woff")
+    font-family: Vazir;
 }
 
 .f-16 {
@@ -40,4 +45,12 @@ input, button {
 
 .gray {
     color: gray;
+}
+
+.fade-gray {
+    color: #6E7794;
+}
+
+.fade-black {
+    color: #3B4157;
 }
