@@ -19,7 +19,7 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     margin-bottom: 15px;
     display: block;
 }
@@ -71,7 +71,11 @@ body {
 }
 
 .padding-top-offset {
-    padding-top: 25px;
+    padding-top: 4%;
+}
+
+.padding-right {
+    padding-right: 10px;
 }
 
 .ltr {
@@ -115,7 +119,15 @@ body {
     color: black;
 }
 
+.right-margin-large {
+    margin-right: 40%;
+}
+
 /* ================== NAVBAR ================== */
+
+nav {
+    margin-top: 15px;
+}
 
 .navmenu {
     padding-top: 20px;
@@ -350,7 +362,7 @@ body {
 
 
 #specializations {
-    margin-bottom: 30px
+    margin-bottom: 10%
 }
 
 .spec-card {
@@ -392,6 +404,132 @@ body {
     justify-content: space-between;
 }
 
+
+/* ================== QUOTE ================== */
+
+.quote-box {
+    background-color: #E5F2FE;
+    border-radius: 25px;
+    margin: 0 10px 0 10px;
+    height: 20rem;
+    border: 1px solid #1780DF;
+
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+    z-index: 1;
+}
+
+.quote-box::before {
+    background-color: #E5F2FE;
+    content: "\00a0";
+    display: block;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-right: 1px solid #1780DF;
+    border-bottom: 1px solid #1780DF;
+    position: absolute;
+    bottom: -22px;
+    left: 75px;
+    transform: rotate(47deg) skew(5deg);
+}
+
+.quote-box > p {
+    padding-top: 25px;
+    margin-bottom: 30%;
+}
+
+.doctor-info {
+    width: 98%;
+    height: 80px;
+    background-image: linear-gradient(to right, #0059ff 60%, rgba(255,255,255,0) 0%);
+    background-position: top;
+    background-size: 10px 1.5px;
+    background-repeat: repeat-x;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.margin-top-offset {
+    margin-top: 10px!important;
+}
+
+.doctor-info img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.button-base {
+    background-color: #FB815E;
+    height: 40px;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: white;
+    border: none;
+}
+
+.button-base p {
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color:white;
+}
+
+.button-base:hover {
+    background-color: #FA6439;
+}
+
+.button-base:focus {
+    background-color: #c42a00;
+}
+
+.quote-img {
+    position: absolute;
+    height: 50px;
+    top: -25px;
+    right: 40px;
+}
+
+.commenter {
+    position: absolute;
+    bottom: -70px;   
+    right: 425px;
+}
+
+.vertical-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.vertical-align div {
+    resize: vertical;
+  overflow: auto;
+}
+
+.top-offset-large {
+    margin-top: 4rem;
+}
+
+.left-margin {
+    margin-left: 66px;
+}
+
+#comments {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    margin-top: 50px;
+    background-color: white;
+
+}
+
+
+
 /* ================== SERVICES ================== */
 
 .services-content {
@@ -403,8 +541,10 @@ body {
 }
 
 .corona-bg {
+    padding-top: 50px;
     background-image: url(images/corona-bg.png);
     background-size: cover;
+
 }
 
 .service-img {
@@ -416,6 +556,10 @@ body {
 
 .sides-margin-med {
     margin: 0 40px 0 40px;
+}
+
+.sides-margin-large {
+    margin: 0 50px 0 50px;
 }
 
 .services-btn {
@@ -435,7 +579,7 @@ body {
     color: white;
 }
 
-.services-btn a:hover {
+.services-btn:hover a {
     color: #0078D7;
 }
 
