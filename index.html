@@ -1,3 +1,5 @@
+<!-- FIXME: Some buttons are not clickable -->
+<!-- TODO: Basic responsive functionality -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,7 @@
     <link rel = "stylesheet" href="fonts/fonts.css" />
     <link href='https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
     <title>Darmankade</title>
 </head>
 <body>
@@ -25,7 +28,7 @@
                         <li class = "nav-item"><a href = "#home"><i class="fa fa-book"></i> مجله پزشکی</a></li>
                         <li class = "nav-item"><a href = "#home"><i class="fa fa-user-md"></i> عضویت پزشکان</a></li>
                         <li class = "nav-item"><a href = "#home"><i class="fa fa-cube"></i> کرونا سازمانی</a></li>
-                        <li class="nav-item left-nav rounded"><a href = "#home">ورود <i class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
+                        <li class="nav-item left-nav rounded"><a href = "login.html">ورود <i class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
                     </ul>
                 </div>
                 
@@ -43,8 +46,8 @@
                         <input type="text" class = "search-input" placeholder="نام پزشک، تخصص یا محله مورد نظر را تایپ کنید">
                         <div id="search-suggestion">
                             <div id = "suggestion-header">
-                                <p class="f-16 col-6" id = "suggestion-header-texts">تخصص های پربازدید</p>
-                                <a href="" class = "f-16 col-6 link" id = "suggestion-header-texts">مشاهده همه تخصص ها</a>
+                                <p class="f-16 col-50" id = "suggestion-header-texts">تخصص های پربازدید</p>
+                                <a href="" class = "f-16 col-50 link" id = "suggestion-header-texts">مشاهده همه تخصص ها</a>
                             </div>
                             <ul>
                                 <li><a href="">فوق تخصص من</a></li>
@@ -82,8 +85,8 @@
     <section id="specializations">
         <div class = "content">
             <div class = "row bottom-offset">
-                <p class = "col-6">بهترین تخصص های درمانکده</p>
-                <a href="" class = "link col-6 ltr"><i class="fas fa-arrow-left" style="padding-right: 5px;"></i> مشاهده همه</a>
+                <p class = "col-50">بهترین تخصص های درمانکده</p>
+                <a href="" class = "link col-50 ltr"><i class="fas fa-arrow-left" style="padding-right: 5px;"></i> مشاهده همه</a>
             </div>
             <div class = "row space-even-row f-16">
                 <a href="" class = "no-decoration black-text">
@@ -149,13 +152,13 @@
     <section id="comments">
         <div class = "content">
             <div class = "row">
-                <div class = "col-6">
+                <div class = "col-50">
                     <div class ="top-offset-large left-margin">
                         <p class = "f-bold f-18 fade-black bottom-offset-more">نظرات و روند درمانی بیماران</p>
                         <p class = "fade-gray f-16">شما می توانید تجربه مراجعه کاربران دیگر به پزشکان را بخوانید و از علت مراجعه سایر بیماران و روند درمانی آن ها آگاهی یابید.</p>
                     </div>
                 </div>
-                <div class = "col-6">
+                <div class = "col-50">
                     <div class = "quote-box">
                         <img src="images/quote.png" class = "quote-img" alt="">
                         <p>
@@ -163,14 +166,14 @@
                         </p>
                         <div class = "doctor-info">
                             <div class = "row padding-top-offset">
-                                <div class = " col-6 flex">
+                                <div class = " col-50 flex">
                                     <img src="images/doctor.jpg" alt="">
                                     <div class = " padding-right padding-top-offset">
                                         <p class = "fade-black f-bold">دکتر زهره رستمی</p>
                                         <p class = "fade-gray f-16">فوق تخصص کلیه(نفرولوژی)</p>
                                     </div>
                                 </div>
-                                <div class = "col-6">
+                                <div class = "col-50">
                                     <div class = "right-margin-large button-base margin-top-offset">
                                         <a href="">
                                             <p class = "f-16">مشاهده نظرات دیگر</p>
@@ -194,7 +197,7 @@
         <div class = "container corona-bg padding-top-offset padding-bottom-offset">
             <p class = "text-center wide white-text f-24 f-bold bottom-offset-more">خدمات ویژه درمانکده برای کووید</p>
             <div class = "services-content">
-                <div class = "col-6 sides-margin-med">
+                <div class = "col-50 sides-margin-med">
                     <img class = "service-img bottom-offset-more" src="images/services1.png" alt="">
                     <p class = "text-center white-text f-bold bottom-offset">تست PCR و آنتی بادی در محل</p>
                     <p class = "white-text bottom-offset"> اگر در شهرهای تهران، مشهد، اصفهان، کرج، شیراز و اهواز هستید، می‌توانید بدون مراجعه به آزمایشگاه و در محل مدنظر خود آزمایش کرونا بدهید.</p>
@@ -204,7 +207,7 @@
                         </a>
                     </button>                    
                 </div>
-                <div class = "col-6 sides-margin-med">
+                <div class = "col-50 sides-margin-med">
                     <img class = "service-img bottom-offset-more" src="images/services2.png" alt="">
                     <p class = "text-center white-text f-bold bottom-offset">مشاوره آنلاین کرونا</p>
                     <p class = "white-text bottom-offset">با تست آنلاین کرونا علائم خود را بررسی کنید و اگر مشکوک بودید میتوانید به صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید.</p>
@@ -221,7 +224,7 @@
     <section id="download">
         <div class = "content">
             <div class = "row">
-                <div class = "col-5">
+                <div class = "col-41">
                     <img class = "download-img" src="/images/signup.png" alt="">
                     <div class = "download-stores">
                         <a href="">
@@ -235,14 +238,14 @@
                         </a>
                     </div>
                 </div>
-                <div class = "col-7">
-                    <div class = "col-2 auto-margin download-app">
+                <div class = "col-58">
+                    <div class = "col-66 auto-margin download-app">
                         <p class = "fade-black f-bold f-18">دانلود اپلیکیشن درمانکده</p>
 
                         <p class = "fade-gray">با اپلیکیشن درمانکده با پزشکان و روانشناسان آنلاین مشاوره کنید یا برای ویزیت حضوری آنلاین نوبت بگیرید.</p>
                         <p class = "padding-top-offset fade-black f-bold">برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.</p>
                         <div class = "app-form">
-                            <input class ="col-6" type="text" placeholder = "مانند *********۰۹">
+                            <input class ="col-50" type="text" placeholder = "مانند *********۰۹">
                             <div class="hover-box">
                                 <a class="hover-btn" href="#">
                                     <span class="hover-btn-descr f-16">ارسال لینک</span>
@@ -267,7 +270,7 @@
                 </p>
             </div>
             <div class = "row bottom-offset">
-                <div class = "col-8">
+                <div class = "col-16">
                     <ul class = "footer-links">
                         <li>
                             <a href = "">درباره درمانکده</a>
@@ -280,7 +283,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class = "col-2">
+                <div class = "col-66">
                     <ul class = "social-links">
                         <li>
                             <a href="">
@@ -302,7 +305,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class = "col-8">
+                <div class = "col-16">
                     <ul class = "footer-links">
                         <li class = "footer-link">
                             <a href = "">سوالات متداول</a>
@@ -357,8 +360,8 @@
 
     <section id="copyright">
         <div class = "footer-container row f-16">
-            <p class = "col-6">در ایران حقوق وجود ندارد</p>
-            <p class = "col-6 ltr">طراحی شده با <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg> توسط خودم</p>
+            <p class = "col-50">در ایران حقوق وجود ندارد</p>
+            <p class = "col-50 ltr">طراحی شده با <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg> توسط خودم</p>
         </div>
     </section>
 

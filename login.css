@@ -1,0 +1,36 @@
+#login-logo {
+    width: 60%;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    outline: none;
+    box-shadow: none;
+    width: 98%!important;
+    position: relative;
+    padding-right: 10px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: 1px solid #0078D7;
+    box-shadow: 1px 1px 5px #0078D7;
+}
+
+#google-login {
+    width: 25%;
+    height: auto;
+}
+
+#input-head {
+    position: absolute;
+    top: 225px;
+    right: 780px;
+    background-color: #fafafa;
+    padding: 0 15px;
+}
