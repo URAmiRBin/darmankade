@@ -81,6 +81,10 @@ body {
     margin-top: 15px;
 }
 
+.top-offset-more {
+    margin-top: 25px;
+}
+
 .padding-bottom-offset {
     padding-bottom: 25px;
 }
