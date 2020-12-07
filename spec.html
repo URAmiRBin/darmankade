@@ -1,124 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css" />
-    <link rel = "stylesheet" href="fonts/fonts.css" />
     <link href='https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="home.css" />
     <link rel="stylesheet" type="text/css" href="spec.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/fonts.css" />
     <title>لیست تخصص ها</title>
 </head>
+
 <body>
-    <header class = "content">
+    <header class="content">
         <nav class="container">
-            <div class= "row">
-                <div class = "logo">
-                    <img class = "logo-img" src="images/logo.svg" alt="darmankade logo">
+            <div class="row-flex">
+                <div class="logo">
+                    <img class="logo-img" src="images/logo.svg" alt="darmankade logo">
                 </div>
-                <div class = "navmenu">
+                <div class="navmenu">
                     <ul>
-                        <li class = "nav-item">
-                            <a href = "#home"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
+                        <li class="nav-item">
+                            <a href="#home"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
                         </li>
-                        <li class = "nav-item"><a href = "#home"><i class="fa fa-wifi"></i> مشاوره آنلاین</a></li>
-                        <li class = "nav-item"><a href = "#home"><i class="fa fa-book"></i> مجله پزشکی</a></li>
-                        <li class = "nav-item"><a href = "#home"><i class="fa fa-user-md"></i> عضویت پزشکان</a></li>
-                        <li class = "nav-item"><a href = "#home"><i class="fa fa-cube"></i> کرونا سازمانی</a></li>
-                        <li class="nav-item left-nav rounded"><a href = "login.html">ورود <i class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-wifi"></i> مشاوره آنلاین</a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-book"></i> مجله پزشکی</a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-user-md"></i> عضویت پزشکان</a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-cube"></i> کرونا سازمانی</a></li>
+                        <li class="nav-item left-nav rounded"><a href="login.html">ورود <i
+                                    class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
                     </ul>
                 </div>
-                
+
             </div>
         </nav>
+
+        <div class="row bottom-offset-more">
+            <img src="images/slider.png" class="w-100" alt="">
+        </div>
     </header>
+
+    <div class="content">
+        <div class="row">
+            <section id="spec-sidebar" class="col-3">
+                <aside class="asidec fixed-top">
+                    <div class="card">
+                        <div id="sidebar-header" class="top-offset bottom-offset right-padding">
+                            <div class="row-flex bottom-offset">
+                                <p class="f-bold no-margin-bottom"><i class="fas fa-bars icon-line-align"></i> همه تخصص
+                                    ها</p>
+                                <p class="f-12 fade-black no-margin-bottom vertical-center right-padding">(به ترتیب حروف
+                                    الفبا)</p>
+                            </div>
+                        </div>
+                        <div class = "right-padding left-padding">
+                            <div class="fourside-padding-5 icon-input row-flex bottom-offset-more">
+                                <i class="fas blue-text fa-search f-20 vertical-center right-padding"></i>
+                                <input class="right-padding" type="text" placeholder="جستجو کنید">
+                            </div>
+
+                        </div>
+                        <div id="spec-list">
+                            <div class="alphabet-category">
+                                <span>
+                                    الف
+                                </span>
+                                <div class="top-offset f-16 fade-black">
+                                    <ul style="list-style: none;">
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                ارتوپدی
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                ارتوپدی کودکان
+
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                ارتوز و پروتز(ارتوپدی فنی)
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                استروتاکسی و فانکشنال مغز و اعصاب
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                آسم آلرژی و ایمونولوژی
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                اکوکاردیوگرافی
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="alphabet-category">
+                                <span>
+                                    ب
+                                </span>
+                                <div class="top-offset f-16 fade-black">
+                                    <ul style="list-style: none;">
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                بالون آنژیوپلاستی
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                بیهوشی
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                بیماریهای ریه                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                بیماریهای پوست و مو
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                بیماریهای قلب و عروق
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                بیماریهای عفونی کودکان
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="alphabet-category">
+                                <span>
+                                    ج
+                                </span>
+                                <div class="top-offset f-16 fade-black">
+                                    <ul style="list-style: none;">
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                جراحی پستان
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                جراحی پلاستیک و زیبایی
+                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                جراحی دست                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                جراحی زانو                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                جراحی ستون فقرات                                            </a>
+                                        </li>
+                                        <li class="bottom-offset">
+                                            <a class="link dashed-hover no-hover" href="">
+                                                جراحی سر و گردن                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="spec-list-scroll-hint">
+                            <p>اسکرول کنید<i class="fas fa-arrow-down icon-line-align"></i></p>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <section id="spec-cards" class="col-9">
+                <div class="row bottom-offset-more">
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/kidney.svg">
+                                    <h5 class="vertical-center">گوارش و کبد</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
+                                    ارزیابی و درمان ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d1.png" alt=""">
+                                        <img class = " absolute-1" src="images/doctor.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset" src="images/spec/nose.svg">
+                                    <h5 class="vertical-center">گوش، حلق و بینی</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
+                                    گوش، بینی، دهان، گلو، ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d3.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/brain.svg">
+                                    <h5 class="vertical-center">مغز و اعصاب</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d6.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom-offset-more">
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/blood.svg">
+                                    <h5 class="vertical-center">خون و انکلوژی</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
+                                    ارزیابی و درمان ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d1.png" alt=""">
+                                        <img class = " absolute-1" src="images/doctor.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/feetus.svg">
+                                    <h5 class="vertical-center">زنان و زایمان</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
+                                    گوش، بینی، دهان، گلو، ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d3.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more" src="images/spec/hair.svg">
+                                    <h5 class="vertical-center">پوست و مو</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d6.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom-offset-more">
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 " src="images/spec/knife.svg">
+                                    <h6 class="vertical-center f-bold f-18">جراحی مغز و اعصاب</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
+                                    ارزیابی و درمان ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d1.png" alt=""">
+                                        <img class = " absolute-1" src="images/doctor.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/brainfuck.svg">
+                                    <h5 class="vertical-center">روان پزشک</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
+                                    گوش، بینی، دهان، گلو، ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d3.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/spine.svg">
+                                    <h5 class="vertical-center">روماتولوژی</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d6.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom-offset-more">
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/kidney.svg">
+                                    <h5 class="vertical-center">گوارش و کبد</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
+                                    ارزیابی و درمان ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d1.png" alt=""">
+                                        <img class = " absolute-1" src="images/doctor.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset" src="images/spec/nose.svg">
+                                    <h5 class="vertical-center">گوش، حلق و بینی</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
+                                    گوش، بینی، دهان، گلو، ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d3.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/brain.svg">
+                                    <h5 class="vertical-center">مغز و اعصاب</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d6.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 " src="images/spec/knife.svg">
+                                    <h6 class="vertical-center f-bold f-18">جراحی مغز و اعصاب</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
+                                    ارزیابی و درمان ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d1.png" alt=""">
+                                        <img class = " absolute-1" src="images/doctor.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/brainfuck.svg">
+                                    <h5 class="vertical-center">روان پزشک</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
+                                    گوش، بینی، دهان، گلو، ...
+                                </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d3.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card card-hover" style="width: 100%;">
+                            <div class="card-body">
+                                <div class="row-flex bottom-offset-more">
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/spine.svg">
+                                    <h5 class="vertical-center">روماتولوژی</h5>
+                                </div>
+                                <p class="f-16 card-text">
+                                    سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
+                                <div class="row-flex">
+                                    <div id="doctors-profile-pic" class="col-50">
+                                        <img src="images/doctors/d6.jpg" alt=""">
+                                        <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
+                                        <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
+                                        <p class = " f-16"> + ده دکتر</p>
+                                    </div>
+                                    <div class="col-50">
+                                        <a href="#"
+                                            class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
+                                            <i class="fas fa-arrow-left icon-line-align"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
 
 
     <footer>
-        <div class= "footer-container">
-            <div class = "row bottom-offset">
-                <div class = "col-33">
-                    <img class = "wide bottom-offset" src="images/logo_invert.svg" alt="logo">
-                    <p class = "wide">درمانکده، ارائه دهنده خدمات آنلاین سلامت
+        <div class="footer-container">
+            <div class="row-flex bottom-offset top-offset-more">
+                <div class="col-33">
+                    <img class="wide bottom-offset" src="images/logo_invert.svg" alt="logo">
+                    <p class="wide">درمانکده، ارائه دهنده خدمات آنلاین سلامت
                         <br>(نوبت گیری اینترنتی، مشاوره آنلاین و ...)
                     </p>
                 </div>
-                <div class = "col-33 flex top-offset-more">
-                    <div class = "col-50 ">
-                        <ul class = "footer-links">
-                            <li class = "footer-link">
-                                <a href = "">سوالات متداول</a>
+                <div class="col-33 flex">
+                    <div class="col-50 ">
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="">سوالات متداول</a>
                             </li>
-                            <li class = "footer-link">
-                                <a href = "">قوانین و مقررات</a>
+                            <li class="footer-link">
+                                <a href="">قوانین و مقررات</a>
                             </li>
-                            <li class = "footer-link">
-                                <a href = "">شکایات</a>
+                            <li class="footer-link">
+                                <a href="">شکایات</a>
                             </li>
                         </ul>
                     </div>
-                    <div class = "col-50">
-                        <ul class = "footer-links">
+                    <div class="col-50">
+                        <ul class="footer-links">
                             <li>
-                                <a href = "">درباره درمانکده</a>
+                                <a href="">درباره درمانکده</a>
                             </li>
                             <li>
-                                <a href = "">تماس با ما</a>
+                                <a href="">تماس با ما</a>
                             </li>
                             <li>
-                                <a href = "">مجله پزشکی</a>
+                                <a href="">مجله پزشکی</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class = "col-33">
-                    <div class = "row e-namad bottom-offset-more">
-                        <div class = "card">
+                <div class="col-33">
+                    <div class="row-flex e-namad bottom-offset-more">
+                        <div class="card">
                             <a href="">
                                 <img src="/images/enamad.png" alt="">
                             </a>
-                        </div>    
-                        <div class= "card">
+                        </div>
+                        <div class="card">
                             <a href="">
                                 <img src="/images/samandehi.png" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class = "row">
-                        <ul class = "social-links">
+                    <div class="row-flex">
+                        <ul class="social-links">
                             <li>
                                 <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white p-1 feather feather-instagram" data-v-1c02d2dc=""><rect x="2" y="2" width="20" height="20" rx="5" ry="5" data-v-1c02d2dc=""></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" data-v-1c02d2dc=""></path><line x1="17.5" y1="6.5" x2="17.5" y2="6.5" data-v-1c02d2dc=""></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px"
+                                        viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="text-white p-1 feather feather-instagram" data-v-1c02d2dc="">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" data-v-1c02d2dc="">
+                                        </rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" data-v-1c02d2dc="">
+                                        </path>
+                                        <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" data-v-1c02d2dc=""></line>
+                                    </svg>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white p-1 feather feather-twitter" data-v-1c02d2dc=""><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" data-v-1c02d2dc=""></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px"
+                                        viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="text-white p-1 feather feather-twitter" data-v-1c02d2dc="">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                            data-v-1c02d2dc=""></path>
+                                    </svg>
                                 </a>
-    
+
                             </li>
                             <li>
                                 <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white p-1 feather feather-linkedin" data-v-1c02d2dc=""><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" data-v-1c02d2dc=""></path><rect x="2" y="9" width="4" height="12" data-v-1c02d2dc=""></rect><circle cx="4" cy="4" r="2" data-v-1c02d2dc=""></circle></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px"
+                                        viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="text-white p-1 feather feather-linkedin" data-v-1c02d2dc="">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                            data-v-1c02d2dc=""></path>
+                                        <rect x="2" y="9" width="4" height="12" data-v-1c02d2dc=""></rect>
+                                        <circle cx="4" cy="4" r="2" data-v-1c02d2dc=""></circle>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                    
+
             </div>
-                
+
         </div>
     </footer>
 
     <section id="copyright">
-        <div class = "footer-container row f-16">
-            <p class = "col-50">در ایران حقوق وجود ندارد</p>
-            <p class = "col-50 ltr">طراحی شده با <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg> توسط خودم</p>
+        <div class="footer-container row-flex f-16">
+            <p class="col-50">در ایران حقوق وجود ندارد</p>
+            <p class="col-50 ltr">طراحی شده با <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc="">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        data-v-1c02d2dc=""></path>
+                </svg> توسط خودم</p>
         </div>
     </section>
 </body>
+
 </html>

@@ -1,0 +1,74 @@
+#doctors-profile-pic img {
+    border-radius: 50%;
+    height: 2rem;
+}
+
+.absolute-1 {
+    position: absolute;
+    right: 40px;
+}
+
+.absolute-2 {
+    position: absolute;
+    right: 65px;
+}
+
+#doctors-profile-pic p {
+    margin: 0!important;
+    padding-right: 15px;
+}
+
+.card-hover:hover {
+    border: 1px solid rgb(255, 81, 0);
+}
+
+#spec-cards h5 {
+    font-weight: bold;
+}
+
+.asidec {
+    z-index: 1!important;
+    width: 100%!important;
+    right: 0;
+    left: 0;
+    top: 0;
+    position: sticky!important;
+    display: block;
+}
+
+#sidebar-header {
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+#spec-list {
+    padding-right: 15px;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+.alphabet-category span {
+    background-color:#E5F2FE;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.alphabet-category a {
+    text-decoration: none;
+    color: #6E7794;
+}
+
+
+.alphabet-category a:hover {
+    color: #0078D7;
+    border-bottom: 1px dashed #0078D7;
+}
+
+#spec-list-scroll-hint {
+    background-color: #E5F2FE;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+    color: #0078D7;
+    padding-top: 10px;
+}
