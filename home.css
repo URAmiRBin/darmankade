@@ -521,6 +521,10 @@ nav {
     width: 30%;
 }
 
+.col-9 .hover-box .hover-btn .hover-btn-icon {
+    width: 25%;
+}
+
 
 /* ================== FOOTER ================== */
 

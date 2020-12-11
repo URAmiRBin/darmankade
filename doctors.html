@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css" />
+    <link href='https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="doctors.css" />
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <title>لیست تخصص ها</title>
+</head>
+
+<body>
+    <header class="content">
+        <nav class="container">
+            <div class="row-flex">
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="logo-img" src="images/logo.svg" alt="darmankade logo">
+                    </a>
+                </div>
+                <div class="navmenu">
+                    <ul>
+                        <li class="nav-item">
+                            <a href="spec.html"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
+                        </li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-wifi"></i> مشاوره آنلاین</a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-book"></i> مجله پزشکی</a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-user-md"></i> عضویت پزشکان</a></li>
+                        <li class="nav-item"><a href="#home"><i class="fa fa-cube"></i> کرونا سازمانی</a></li>
+                        <li class="nav-item left-nav rounded"><a href="login.html">ورود <i
+                                    class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="row-flex top-offset-more">
+            <a href="">
+                <span class = "f-bold blue-text left-padding">
+                    درمانکده <i class="fas fa-arrow-left icon-line-align"></i>
+                </span>
+            </a>
+            <p class = "fade-gray f-16">
+                متخصص مغز و اعصاب(نورولوژی)
+            </p>
+        </div>
+        <div class="row fourside-padding-5 white-text blue-bg rounded-15p bottom-offset-more">
+            <h2 class = "padding-top-10p bottom-offset">لیست بهترین متخصص مغز و اعصاب(نورولوژی) برای مشاوره آنلاین و حضوری</h2>
+            <p class = "bottom-offset">ویزیت حضوری و مشاوره آنلاین (تصویری، صوتی و متنی) با بهترین پزشکان متخصص مغز و اعصاب(نورولوژی) در تهران</p>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="row">
+            <section class="col-3 no-right-padding bottom-offset-lot">
+                <div class= "bottom-offset">
+                    <img class = "w-100" src="/images/corona-banner.png" alt="">
+                </div>
+                <aside class="asidec fixed-top">
+                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                        <div id="sidebar-header" class = "bottom-offset-more">
+                            <p class = "padding-bottom-15 no-margin-bottom">جستجو در نتایج</p>
+                        </div>
+                        <div class = "right-padding left-padding bottom-offset">
+                            <div class="fourside-padding-5 icon-input row-flex bottom-offset">
+                                <i class="fas fade-gray fa-search f-20 vertical-center"></i>
+                                <input class = "right-padding" type="text" placeholder="جستجو کنید">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                        <div class = "row-flex">
+                            <p class="col-50 no-margin-bottom">تخصص ها</p>
+                            <p class="col-50 ltr no-margin-bottom">
+                                <i class="fas fa-chevron-down"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                        <div class = "row-flex">
+                            <p class="col-50 no-margin-bottom">زمان نوبت</p>
+                            <p class="col-50 ltr no-margin-bottom">
+                                <i class="fas fa-chevron-down"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                        <div class = "row-flex">
+                            <p class="col-50 no-margin-bottom">بیمارستان</p>
+                            <p class="col-50 ltr no-margin-bottom">
+                                <i class="fas fa-chevron-down"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                        <div class = "row-flex">
+                            <p class="col-50 no-margin-bottom">جنسیت</p>
+                            <p class="col-50 ltr no-margin-bottom">
+                                <i class="fas fa-chevron-down"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                        <div class = "row-flex">
+                            <p class="col-80 no-margin-bottom">نمایش پزشکان با مشاوره آنلاین</p>
+                            <p class="col-20 ltr no-margin-bottom">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <section class="col-9 no-left-padding">
+                <div class="row bottom-offset-more">
+                    <div class="row no-left-padding">
+                        <div class="card fourside-padding-5 bottom-offset">
+                            <div class="flex padding-bottom-up-less">
+                                <p class = "no-margin-bottom left-padding">
+                                    <i class="fas fa-sliders-h icon-line-align"></i>
+                                </p>
+                                <p class = "no-margin-bottom">
+                                    مرتب سازی بر اساس:
+                                </p>
+                                <div id="filters">
+                                    <p id = "selected-filter" class = "no-margin-bottom">منتخب</p>
+                                    <p class = "fade-gray no-margin-bottom">بیشترین رضایتمندی</p>
+                                    <p class = "fade-gray no-margin-bottom">زودترین نوبت</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row no-left-padding bottom-offset">
+                        <div class="card card-hover padding-top-10p no-left-padding">
+                            <div class="row">
+                                <div class="row col-7">
+                                    <div class="col-4">
+                                        <img class = "round-pic fourside-padding-5" src="/images/doctor1.jpg" alt="">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class = "padding-top-10p">
+                                            <p class = "f-bold f-18 no-margin-bottom">مهران جلالی</p>
+                                            <p>متخصص مغز و اعصاب (نورولوژی)</p>
+                                            <div class = "flex">
+                                                <p class = "bottom-offset left-padding blue-text">
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                </p>
+                                                <p class = "f-12 fade-gray">(49 نظر)</p>
+                                            </div>
+                                            <p class = "fade-gray f-16">“ آقای دکتر خیلی با صبر وحوصله با بیمار برخورد میکنه. از نظر من عالی هستن😊 “</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5 no-left-padding">
+                                    <div class="card doctor-detail-card">
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
+                                            تهران | پونک
+                                        </p>
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-book icon-line-align"></i>
+                                            تجربه کاری 27 سال
+                                        </p>
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-thumbs-up icon-line-align"></i>
+                                            94  درصد رضایت کاربران
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9 hover-box">
+                                            <a class="hover-btn" href="#">
+                                                <span class="hover-btn-descr">نوبت بگیر</span>
+                                                <div class="hover-btn-icon">
+                                                    <i class="fas fa-arrow-left"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <dov class="col-3">
+                                            <div id = "like-button">
+                                                <p class = "blue-text f-20 no-margin-bottom">
+                                                    <i class="far fa-heart"></i>
+                                                </p>
+                                            </div>
+                                        </dov>
+                                    </div>
+                                    <p class = "text-center blue-text">اولین نوبت خالی دوشنبه 24 آذر</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row no-left-padding bottom-offset">
+                        <div class="card card-hover padding-top-10p no-left-padding">
+                            <div class="row">
+                                <div class="row col-7">
+                                    <div class="col-4">
+                                        <img class = "round-pic fourside-padding-5" src="/images/doctor2.png" alt="">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class = "padding-top-10p">
+                                            <p class = "f-bold f-18 no-margin-bottom">شیوا امامی</p>
+                                            <p>متخصص مغز و اعصاب (نورولوژی)</p>
+                                            <div class = "flex">
+                                                <p class = "bottom-offset left-padding blue-text">
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                </p>
+                                                <p class = "f-12 fade-gray">(7 نظر)</p>
+                                            </div>
+                                            <p class = "fade-gray f-16">“ با سلام بسیار مهربان و با حوصله و دلسوز و با دقت و دوست داشتنی بودند. “</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5 no-left-padding">
+                                    <div class="card doctor-detail-card">
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
+                                            تهران | خیابان سید جمال ادین اسد آبادی
+                                        </p>
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-book icon-line-align"></i>
+                                            تجربه کاری 6 سال
+                                        </p>
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-thumbs-up icon-line-align"></i>
+                                            100  درصد رضایت کاربران
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9 hover-box">
+                                            <a class="hover-btn" href="#">
+                                                <span class="hover-btn-descr">نوبت بگیر</span>
+                                                <div class="hover-btn-icon">
+                                                    <i class="fas fa-arrow-left"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <dov class="col-3">
+                                            <div id = "like-button">
+                                                <p class = "blue-text f-20 no-margin-bottom">
+                                                    <i class="far fa-heart"></i>
+                                                </p>
+                                            </div>
+                                        </dov>
+                                    </div>
+                                    <p class = "text-center blue-text">اولین نوبت خالی چهارشنبه 26 آذر</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row no-left-padding bottom-offset">
+                        <div class="card card-hover padding-top-10p no-left-padding">
+                            <div class="row">
+                                <div class="row col-7">
+                                    <div class="col-4">
+                                        <img class = "round-pic fourside-padding-5" src="/images/doctor3.png" alt="">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class = "padding-top-10p">
+                                            <p class = "f-bold f-18 no-margin-bottom">زهرا شریفی بهرام</p>
+                                            <p>متخصص مغز و اعصاب (نورولوژی)</p>
+                                            <div class = "flex">
+                                                <p class = "bottom-offset left-padding blue-text">
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i class="fas fa-star icon-line-align"></i>
+                                                </p>
+                                                <p class = "f-12 fade-gray">(2 نظر)</p>
+                                            </div>
+                                            <p class = "fade-gray f-16">“ واقع بین بودن ایشان به حال بیمار و نتراشیدن هزینه های بیخود من را واقعاً تحت تاثیر قرار داد، و کلی از ایشان انرژی گرفتم، برخلا ... “</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5 no-left-padding">
+                                    <div class="card doctor-detail-card">
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
+                                            تهران | کوی نصر (گیشا)
+                                        </p>
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-book icon-line-align"></i>
+                                            تجربه کاری 5 سال
+                                        </p>
+                                        <p class = "fade-gray no-margin-bottom">
+                                            <i class="left-padding f-18 fas fa-thumbs-up icon-line-align"></i>
+                                            100  درصد رضایت کاربران
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9 hover-box">
+                                            <a class="hover-btn" href="#">
+                                                <span class="hover-btn-descr">نوبت بگیر</span>
+                                                <div class="hover-btn-icon">
+                                                    <i class="fas fa-arrow-left"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <dov class="col-3">
+                                            <div id = "like-button">
+                                                <p class = "blue-text f-20 no-margin-bottom">
+                                                    <i class="far fa-heart"></i>
+                                                </p>
+                                            </div>
+                                        </dov>
+                                    </div>
+                                    <p class = "text-center blue-text">اولین نوبت خالی دوشنبه 24 آذر</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="more-info">
+        <div class="content bottom-offset-more">
+            <h4 class ="bottom-offset-more">هر آنچه که باید از
+                <span class = "blue-text">
+                    متخصص مغز و اعصاب(نورولوژی) 
+                </span> 
+                 بدانید!</h4>
+            <p class = "fade-gray">
+                سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی (اعصاب و نورون‌های عضلات) تقسیم می‌شود. تمام بیماری‌هایی که هر یک از این قسمت‌ها را درگیر کند، توسط پزشک متخصص مغز و اعصاب درمان می‌شوند.
+            </p>
+            <p class = "fade-gray">
+                پزشک مغز و اعصاب بیماریهایی از قبیل انواع سرد
+            </p>
+            <div class = "ltr">
+                <div class="btn-base btn-small btn-orange btn-orange-hover text-center" style="width: 12%;">
+                            <p class = "no-margin-bottom">
+                                بیشتر بخوانید
+                                <i class="fas fa-chevron-down"></i>
+                            </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <div class="content bottom-offset-more">
+            <h3 class = "bottom-offset-more">متخصص مغز و اعصاب(نورولوژی)</h3>
+            <div class="question flex bottom-offset padding-bottom-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class = "left-offset-less" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line data-v-adeba6c6="" x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <p class = "no-margin-bottom">
+                    ⭐بیماران چه زمانی باید به متخصص مغز و اعصاب یا جراح مغز و اعصاب و یا به روانپزشک مراجعه کنند؟
+                </p>
+            </div>
+            <div class = "answer">
+                <p class = "fade-gray">
+                    پاسخ داده شده توسط: 
+                    <a class = "no-decoration fade-gray" href="">
+                        دکتر رخصت یزدی، متخصص مغز و اعصاب
+                    </a>
+                </p>
+                <p class = "fade-gray">
+                    این سه رشته با توجه به همپوشانی هایی که دارند خیلی وقت ها بیماران دچار سردرگمی می شوند که ابتدا باید به کدام یک از این دو یا سه تخصص مراجعه کنند. افتراق اینکه واقعاً چه بیماری نیاز به چه فوق تخصصی دارد در حد یک پزشک عمومی و یا یک پزشک متخصص است.
+                </p>
+                <p class = "fade-gray">
+                    در خصوص بیماری هایی مثل افسردگی، وسواس، اختلالات اضطرابی و همچنین اخباری مثل اخبار خودکشی یا خودآزاری و دیگرآزاری، اینها باید بیمار به متخصص اعصاب و روان و مشاور، روانکاو و روانپزشک و به تناسب هر کدام از اینها مراجعه کنند. یک متخصص اعصاب و روان یا روانکاو و یا روانپزشک بنا به صلاحدید مراجعه کند.
+                </p>
+                <p class = "fade-gray">
+                    ولی به طور کلی می توانم این نظر را بدهم که هر زمان که نیاز به یک کار جراحی و یا برداشتن توده، تخلیه ی خونریزی یا برداشتن یک اثر فشاری ای که روی سیستم عصبی هست شما باید طبیعتاً به جراح مغز و اعصاب مراجعه کنید. در خصوص یک سری بیماری هایی مثل سکته ی مغزی، بیماری های التهابی مغز مثل ام اس، بیماری هایی که اعصاب محیطی را درگیر می کند مثل بیماری های گیلن باره یا سی آی وی پی، بیماری هایی مثل تشنج، بیماری هایی مثل سر درد، سرگیجه، انواع سردردها، میگرن، کلاستر، سردردهای تنشی یا تنشنی، سردردهای خوشه ای و سایر انواع سردرد شما می توانید به متخصص مغز و اعصاب مراجعه کنید.
+                </p>
+            </div>
+            <div class="horizontal-line bottom-offset"></div>
+
+            <div class="question flex bottom-offset padding-bottom-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class = "left-offset-less" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line data-v-adeba6c6="" x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <p class = "no-margin-bottom">
+                    ⭐سردرد ها چند دسته هستند و راه های درمان آن چیست؟
+                </p>
+            </div>
+            <div class = "answer">
+                <p class = "fade-gray">
+                    پاسخ داده شده توسط: 
+                    <a class = "no-decoration fade-gray" href="">
+                        دکتر رخصت یزدی، متخصص مغز و اعصاب
+                    </a>
+                </p>
+                <p class = "fade-gray">
+                    این سه رشته با توجه به همپوشانی هایی که دارند خیلی وقت ها بیماران دچار سردرگمی می شوند که ابتدا باید به کدام یک از این دو یا سه تخصص مراجعه کنند. افتراق اینکه واقعاً چه بیماری نیاز به چه فوق تخصصی دارد در حد یک پزشک عمومی و یا یک پزشک متخصص است.
+                </p>
+                <p class = "fade-gray">
+                    در خصوص بیماری هایی مثل افسردگی، وسواس، اختلالات اضطرابی و همچنین اخباری مثل اخبار خودکشی یا خودآزاری و دیگرآزاری، اینها باید بیمار به متخصص اعصاب و روان و مشاور، روانکاو و روانپزشک و به تناسب هر کدام از اینها مراجعه کنند. یک متخصص اعصاب و روان یا روانکاو و یا روانپزشک بنا به صلاحدید مراجعه کند.
+                </p>
+                <p class = "fade-gray">
+                    ولی به طور کلی می توانم این نظر را بدهم که هر زمان که نیاز به یک کار جراحی و یا برداشتن توده، تخلیه ی خونریزی یا برداشتن یک اثر فشاری ای که روی سیستم عصبی هست شما باید طبیعتاً به جراح مغز و اعصاب مراجعه کنید. در خصوص یک سری بیماری هایی مثل سکته ی مغزی، بیماری های التهابی مغز مثل ام اس، بیماری هایی که اعصاب محیطی را درگیر می کند مثل بیماری های گیلن باره یا سی آی وی پی، بیماری هایی مثل تشنج، بیماری هایی مثل سر درد، سرگیجه، انواع سردردها، میگرن، کلاستر، سردردهای تنشی یا تنشنی، سردردهای خوشه ای و سایر انواع سردرد شما می توانید به متخصص مغز و اعصاب مراجعه کنید.
+                </p>
+            </div>
+            <div class="horizontal-line bottom-offset"></div>
+
+            <div class="question flex bottom-offset padding-bottom-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class = "left-offset-less" data-v-adeba6c6=""><line x1="12" y1="5" x2="12" y2="19" data-v-adeba6c6=""></line><line data-v-adeba6c6="" x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <p class = "no-margin-bottom">
+                    ⭐رعایت کردن چه نکاتی باعث کاهش سردرد ها به خصوص سردرد های میگرنی میشود؟
+                </p>
+            </div>
+            <div class = "answer">
+                <p class = "fade-gray">
+                    پاسخ داده شده توسط: 
+                    <a class = "no-decoration fade-gray" href="">
+                        دکتر رخصت یزدی، متخصص مغز و اعصاب
+                    </a>
+                </p>
+                <p class = "fade-gray">
+                    این سه رشته با توجه به همپوشانی هایی که دارند خیلی وقت ها بیماران دچار سردرگمی می شوند که ابتدا باید به کدام یک از این دو یا سه تخصص مراجعه کنند. افتراق اینکه واقعاً چه بیماری نیاز به چه فوق تخصصی دارد در حد یک پزشک عمومی و یا یک پزشک متخصص است.
+                </p>
+                <p class = "fade-gray">
+                    در خصوص بیماری هایی مثل افسردگی، وسواس، اختلالات اضطرابی و همچنین اخباری مثل اخبار خودکشی یا خودآزاری و دیگرآزاری، اینها باید بیمار به متخصص اعصاب و روان و مشاور، روانکاو و روانپزشک و به تناسب هر کدام از اینها مراجعه کنند. یک متخصص اعصاب و روان یا روانکاو و یا روانپزشک بنا به صلاحدید مراجعه کند.
+                </p>
+                <p class = "fade-gray">
+                    ولی به طور کلی می توانم این نظر را بدهم که هر زمان که نیاز به یک کار جراحی و یا برداشتن توده، تخلیه ی خونریزی یا برداشتن یک اثر فشاری ای که روی سیستم عصبی هست شما باید طبیعتاً به جراح مغز و اعصاب مراجعه کنید. در خصوص یک سری بیماری هایی مثل سکته ی مغزی، بیماری های التهابی مغز مثل ام اس، بیماری هایی که اعصاب محیطی را درگیر می کند مثل بیماری های گیلن باره یا سی آی وی پی، بیماری هایی مثل تشنج، بیماری هایی مثل سر درد، سرگیجه، انواع سردردها، میگرن، کلاستر، سردردهای تنشی یا تنشنی، سردردهای خوشه ای و سایر انواع سردرد شما می توانید به متخصص مغز و اعصاب مراجعه کنید.
+                </p>
+            </div>
+            <div class="horizontal-line bottom-offset"></div>
+
+            
+        </div>
+    </section>
+
+    <section id="services">
+        <div class = "my-container corona-bg padding-top-offset padding-bottom-offset">
+            <p class = "text-center wide white-text f-24 f-bold bottom-offset-more">خدمات ویژه درمانکده برای کووید</p>
+            <div class = "services-content">
+                <div class = "col-50 sides-margin-med">
+                    <img class = "service-img bottom-offset-more" src="images/services1.png" alt="">
+                    <p class = "text-center white-text f-bold bottom-offset">تست PCR و آنتی بادی در محل</p>
+                    <p class = "white-text bottom-offset"> اگر در شهرهای تهران، مشهد، اصفهان، کرج، شیراز و اهواز هستید، می‌توانید بدون مراجعه به آزمایشگاه و در محل مدنظر خود آزمایش کرونا بدهید.</p>
+                    <button class = "services-btn bottom-offset top-offset">
+                        <a href="">
+                            <p class = "no-margin-bottom f-18">درخواست آزمایش <i class="fas fa-arrow-left"></i></p>
+                        </a>
+                    </button>                    
+                </div>
+                <div class = "col-50 sides-margin-med">
+                    <img class = "service-img bottom-offset-more" src="images/services2.png" alt="">
+                    <p class = "text-center white-text f-bold bottom-offset">مشاوره آنلاین کرونا</p>
+                    <p class = "white-text bottom-offset">با تست آنلاین کرونا علائم خود را بررسی کنید و اگر مشکوک بودید میتوانید به صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید.</p>
+                    <button class = "services-btn bottom-offset top-offset">
+                        <a href="">
+                            <p class = "no-margin-bottom f-18">دریافت مشاوره کرونا <i class="fas fa-arrow-left"></i></p>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class = "content">
+            <div class = "row-flex">
+                <div class = "col-41">
+                    <img class = "download-img" src="/images/signup.png" alt="">
+                    <div class = "download-stores">
+                        <a href="">
+                            <img src="images/play store.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/apple.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="images/bazaar.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class = "col-58">
+                    <div class = "col-66 auto-margin download-app">
+                        <p class = "fade-black f-bold f-18">دانلود اپلیکیشن درمانکده</p>
+
+                        <p class = "fade-gray">با اپلیکیشن درمانکده با پزشکان و روانشناسان آنلاین مشاوره کنید یا برای ویزیت حضوری آنلاین نوبت بگیرید.</p>
+                        <p class = "padding-top-offset fade-black f-bold">برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.</p>
+                        <div class = "app-form">
+                            <input class ="col-50" type="text" placeholder = "مانند *********۰۹">
+                            <div class="hover-box">
+                                <a class="hover-btn" href="#">
+                                    <span class="hover-btn-descr f-16">ارسال لینک</span>
+                                    <div class="hover-btn-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="row-flex bottom-offset top-offset-more">
+                <div class="col-33">
+                    <img class="wide bottom-offset" src="images/logo_invert.svg" alt="logo">
+                    <p class="wide">درمانکده، ارائه دهنده خدمات آنلاین سلامت
+                        <br>(نوبت گیری اینترنتی، مشاوره آنلاین و ...)
+                    </p>
+                </div>
+                <div class="col-33 flex">
+                    <div class="col-50 ">
+                        <ul class="footer-links">
+                            <li class="footer-link">
+                                <a href="">سوالات متداول</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="">قوانین و مقررات</a>
+                            </li>
+                            <li class="footer-link">
+                                <a href="">شکایات</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-50">
+                        <ul class="footer-links">
+                            <li>
+                                <a href="">درباره درمانکده</a>
+                            </li>
+                            <li>
+                                <a href="">تماس با ما</a>
+                            </li>
+                            <li>
+                                <a href="">مجله پزشکی</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-33">
+                    <div class="row-flex e-namad bottom-offset-more">
+                        <div class="card">
+                            <a href="">
+                                <img src="/images/enamad.png" alt="">
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="">
+                                <img src="/images/samandehi.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row-flex">
+                        <ul class="social-links">
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px"
+                                        viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="text-white p-1 feather feather-instagram" data-v-1c02d2dc="">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" data-v-1c02d2dc="">
+                                        </rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" data-v-1c02d2dc="">
+                                        </path>
+                                        <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" data-v-1c02d2dc=""></line>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px"
+                                        viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="text-white p-1 feather feather-twitter" data-v-1c02d2dc="">
+                                        <path
+                                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                            data-v-1c02d2dc=""></path>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36px" height="36px"
+                                        viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="text-white p-1 feather feather-linkedin" data-v-1c02d2dc="">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                            data-v-1c02d2dc=""></path>
+                                        <rect x="2" y="9" width="4" height="12" data-v-1c02d2dc=""></rect>
+                                        <circle cx="4" cy="4" r="2" data-v-1c02d2dc=""></circle>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <section id="copyright">
+        <div class="footer-container row-flex f-16">
+            <p class="col-50">در ایران حقوق وجود ندارد</p>
+            <p class="col-50 ltr">طراحی شده با <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc="">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                        data-v-1c02d2dc=""></path>
+                </svg> توسط خودم</p>
+        </div>
+    </section>
+</body>
+
+</html>
