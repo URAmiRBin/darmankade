@@ -102,6 +102,10 @@ body {
     margin-top: 50px;
 }
 
+.top-offset-less {
+    margin-top: 5px;
+}
+
 .left-offset-more {
     margin-left: 25px;
 }
@@ -112,6 +116,10 @@ body {
 
 .right-padding {
     padding-right: 10px;
+}
+
+.right-padding-more {
+    padding-right: 20px;
 }
 
 .left-padding {
@@ -130,6 +138,9 @@ body {
     padding-top: 10px;
 }
 
+.padding-bottom-10p {
+    padding-bottom: 10px;
+}
 .padding-right {
     padding-right: 10px;
 }
@@ -155,7 +166,7 @@ body {
 }
 
 .blue-bg {
-    background-color: #0078D7;
+    background-color: #0078D7!important;
 }
 
 .link {
@@ -254,6 +265,10 @@ body {
     padding: 5px;
 }
 
+.fourside-padding-15 {
+    padding: 15px;
+}
+
 .fourside-margin-10 {
     margin: 10px;
 }
@@ -284,6 +299,10 @@ body {
 
 .no-margin-bottom {
     margin-bottom: 0 !important;
+}
+
+.no-border {
+    border: none!important;
 }
 
 .bottom-offset-less {
@@ -388,4 +407,49 @@ input:checked+.slider:before {
 
 #services {
     margin-left: 0!important;
+}
+
+.right-margin-little {
+    margin-right: 2%;
+}
+
+.pale-orange-bg {
+    background-color: #ff9173;
+}
+
+.orange-hover:hover {
+    background-color: #FA5A2C;
+}
+
+.pale-orange-bg .reserve-hover {
+    display: none;
+}
+
+.pale-orange-bg:hover .default-btn {
+    display: none;
+}
+
+.pale-orange-bg:hover .reserve-hover {
+    display: grid;
+}
+
+.deactive-btn {
+    background-color: #EDEDED;
+    border: solid 1px grey;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.light-blue-bg {
+    background-color: #E5F2FE!important;
+}
+
+.light-grey-bg {
+    background-color: #EDEDED;
+}
+
+.no-bottom-border-radius {
+    border-radius: 8px 8px 0 0;
 }

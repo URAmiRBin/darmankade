@@ -470,7 +470,7 @@ nav {
 
 .auto-margin {
     display: block;
-    margin: auto;
+    margin: auto!important;
 }
 
 .download-stores {
