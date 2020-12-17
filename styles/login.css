@@ -34,3 +34,7 @@ input[type=text]:focus {
     background-color: #fafafa;
     padding: 0 15px;
 }
+
+button {
+    cursor: pointer;
+}

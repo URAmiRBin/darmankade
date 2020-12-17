@@ -453,3 +453,11 @@ input:checked+.slider:before {
 .no-bottom-border-radius {
     border-radius: 8px 8px 0 0;
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.green-text {
+    color: green;
+}

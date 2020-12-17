@@ -56,7 +56,7 @@ nav {
     background-size: cover;
     background-color: #0078D7;
     border-radius: 20px;
-    background-image: url(/images/searchbg.png);
+    background-image: url('../images/searchbg.png');
     height: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -179,11 +179,20 @@ nav {
     padding-top: 10px;
     padding-bottom: 10px;
     color: grey;
+    cursor: pointer;
 }
 
 #location-selector li:hover {
     background-color: #FA6439;
     color: white;
+}
+
+#location-selector li:last-child:hover {
+    border-radius: 0 0 15px 15px;
+}
+
+#location-selector li:first-child:hover {
+    border-radius: 15px 15px 0 0;
 }
 
 .drop-down:focus #location-selector {
@@ -222,6 +231,7 @@ nav {
     transition: 0.3s;
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 .search-btn:hover {

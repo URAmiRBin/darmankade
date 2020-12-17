@@ -46,6 +46,10 @@
     display: flex;
 }
 
+#filters p {
+    cursor: pointer;
+}
+
 #selected-filter {
     background-color: #0078D7;
     border-radius: 10px;
@@ -148,6 +152,7 @@
 .tabs {
     border-radius: 8px 8px 0 0;
     background-color: #EDEDED;
+    cursor: pointer;
 }
 
 .selected-tab {
