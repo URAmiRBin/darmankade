@@ -144,7 +144,7 @@
 
 .deactive-date {
     background-color: #EDEDED!important;
-    color: rgba(100, 100, 100, .8);
+    color: rgba(100, 100, 100, .8)!important;
 }
 
 #days button {
@@ -157,6 +157,11 @@
 #days button:focus .card {
     background-color: #0078D7;
     color: white;
+}
+
+#days button:focus .deactive-date {
+    background-color: #EDEDED!important;
+    color: rgba(100, 100, 100, .8)!important;
 }
 
 #days button:focus {
