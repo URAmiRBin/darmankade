@@ -38,6 +38,8 @@ input, button {
     font-family: Vazir;
 }
 
+/* ========= Font sizes ========= */
+
 .f-16 {
     font-size: .9rem;
 }
@@ -74,6 +76,8 @@ input, button {
     font-weight: bold;
 }
 
+/* ========= Font colors ========= */
+
 .gray {
     color: gray;
 }
@@ -84,4 +88,20 @@ input, button {
 
 .fade-black {
     color: #3B4157;
+}
+
+.dark-green {
+  color:darkgreen;
+}
+
+.white-text {
+  color: white;
+}
+
+.black-text {
+  color: black;
+}
+
+.blue-text {
+  color: #0078D7;
 }

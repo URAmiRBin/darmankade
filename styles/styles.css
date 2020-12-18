@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #FAFAFA!important;
+    background-color: #FAFAFA !important;
     direction: rtl;
 }
 
@@ -37,10 +37,10 @@ body {
     border-radius: 15px;
 }
 
+/* Custom width */
 .col-70 {
     width: 70%;
 }
-
 
 .col-30 {
     width: 30%;
@@ -78,6 +78,24 @@ body {
     width: 20%;
 }
 
+.flex {
+    display: flex;
+}
+
+
+.wide {
+    flex: 0 0 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.max-height {
+    min-height: 100vh;
+}
+
+/* Offsets */
 .bottom-offset {
     margin-bottom: 15px;
 }
@@ -141,34 +159,112 @@ body {
 .padding-bottom-10p {
     padding-bottom: 10px;
 }
+
 .padding-right {
     padding-right: 10px;
 }
 
-.ltr {
-    direction: ltr;
+.right-margin-large {
+    margin-right: 40%;
 }
 
-.flex {
-    display: flex;
+.fourside-padding-5 {
+    padding: 5px;
+}
+
+.fourside-padding-15 {
+    padding: 15px;
+}
+
+.fourside-margin-10 {
+    margin: 10px;
+}
+
+.padding-bottom-up-less {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.no-left-padding {
+    padding-left: 0px !important;
+}
+
+.no-right-padding {
+    padding-right: 0px !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.bottom-offset-less {
+    margin-bottom: 5px;
+}
+
+.padding-bottom-15 {
+    padding-bottom: 15px;
+}
+
+.padding-btn-top-bottom {
+    padding-top: 8% !important;
+    padding-bottom: 8% !important;
+}
+
+.right-margin-little {
+    margin-right: 2%;
+}
+
+/* Alignments */
+.ltr {
+    direction: ltr;
 }
 
 .text-center {
     text-align: center !important;
 }
 
-.wide {
-    flex: 0 0 100%;
+.center-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.white-text {
-    color: white;
+.icon-line-align {
+    padding-right: 5px;
+    padding-top: 4px;
 }
 
+.auto-align {
+    margin: auto;
+}
+
+.vertical-center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Backgrounds */
 .blue-bg {
-    background-color: #0078D7!important;
+    background-color: #0078D7 !important;
 }
 
+.white-alt-bg {
+    background-color: #FAFAFA;
+}
+
+.pale-orange-bg {
+    background-color: #ff9173;
+}
+
+.light-blue-bg {
+    background-color: #E5F2FE !important;
+}
+
+.light-grey-bg {
+    background-color: #EDEDED;
+}
+
+/* Links */
 .link {
     text-decoration: none;
     color: #0078D7;
@@ -178,46 +274,7 @@ body {
     color: orangered;
 }
 
-.no-hover:hover {
-    color: #0078D7;
-}
-
-.dashed-border {
-    border-bottom: 1px dashed #0078D7;
-}
-
-.no-decoration {
-    text-decoration: none;
-}
-
-.black-text {
-    color: black;
-}
-
-.right-margin-large {
-    margin-right: 40%;
-}
-
-
-.max-height {
-    min-height: 100vh;
-}
-
-.center-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.white-alt-bg {
-    background-color: #FAFAFA;
-}
-
-.icon-line-align {
-    padding-right: 5px;
-    padding-top: 4px;
-}
-
+/* Buttons */
 .btn-base {
     border: none;
     border-radius: 10px;
@@ -227,7 +284,7 @@ body {
 
 .btn-small {
     padding-top: 8px;
-    height: 40px!important;
+    height: 40px !important;
     transition: 0.4s;
 }
 
@@ -248,31 +305,6 @@ body {
     transition: 0.3s;
 }
 
-.auto-align {
-    margin: auto;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.vertical-center {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.fourside-padding-5 {
-    padding: 5px;
-}
-
-.fourside-padding-15 {
-    padding: 15px;
-}
-
-.fourside-margin-10 {
-    margin: 10px;
-}
-
 .btn-primary-orange {
     color: #FB815E !important;
     border: 2px solid #FB815E !important;
@@ -284,35 +316,28 @@ body {
     background-color: #FB815E !important;
 }
 
-.circle {
-    border-radius: 50%;
+.deactive-btn {
+    background-color: #EDEDED;
+    border: solid 1px grey;
 }
 
-.padding-btn-top-bottom {
-    padding-top: 8% !important;
-    padding-bottom: 8% !important;
+.orange-hover:hover {
+    background-color: #FA5A2C;
 }
 
-#copyright p {
-    margin-bottom: 0 !important;
+.pale-orange-bg .reserve-hover {
+    display: none;
 }
 
-.no-margin-bottom {
-    margin-bottom: 0 !important;
+.pale-orange-bg:hover .default-btn {
+    display: none;
 }
 
-.no-border {
-    border: none!important;
+.pale-orange-bg:hover .reserve-hover {
+    display: grid;
 }
 
-.bottom-offset-less {
-    margin-bottom: 5px;
-}
-
-.blue-text {
-    color: #0078D7;
-}
-
+/* Input with icon beside */
 .icon-input {
     background-color: rgba(0, 0, 0, .05);
     border: 1px solid rgba(0, 0, 0, .2);
@@ -325,27 +350,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.padding-bottom-up-less {
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-.no-left-padding {
-    padding-left: 0px !important;
-}
-
-.no-right-padding {
-    padding-right: 0px !important;
-}
-
-.row-card-height {
-    padding: 10px 10px;
-}
-
-.padding-bottom-15 {
-    padding-bottom: 15px;
-}
-
+/* Switch on and off : specialties page */
 .switch {
     position: relative;
     display: inline-block;
@@ -405,59 +410,40 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-#services {
-    margin-left: 0!important;
+/* Excludes */
+.no-bottom-border-radius {
+    border-radius: 8px 8px 0 0;
 }
 
-.right-margin-little {
-    margin-right: 2%;
+.no-border {
+    border: none !important;
 }
 
-.pale-orange-bg {
-    background-color: #ff9173;
+.no-hover:hover {
+    color: #0078D7;
 }
 
-.orange-hover:hover {
-    background-color: #FA5A2C;
+.no-decoration {
+    text-decoration: none;
 }
 
-.pale-orange-bg .reserve-hover {
-    display: none;
-}
-
-.pale-orange-bg:hover .default-btn {
-    display: none;
-}
-
-.pale-orange-bg:hover .reserve-hover {
-    display: grid;
-}
-
-.deactive-btn {
-    background-color: #EDEDED;
-    border: solid 1px grey;
+/* Others */
+.clickable {
+    cursor: pointer;
 }
 
 .line-through {
     text-decoration: line-through;
 }
 
-.light-blue-bg {
-    background-color: #E5F2FE!important;
+.circle {
+    border-radius: 50%;
 }
 
-.light-grey-bg {
-    background-color: #EDEDED;
+.row-card-height {
+    padding: 10px 10px;
 }
 
-.no-bottom-border-radius {
-    border-radius: 8px 8px 0 0;
-}
-
-.clickable {
-    cursor: pointer;
-}
-
-.green-text {
-    color: green;
+.dashed-border {
+    border-bottom: 1px dashed #0078D7;
 }

@@ -723,6 +723,10 @@ input[type=text] {
     background-color: #FAFAFA;
 }
 
+#copyright p {
+    margin-bottom: 0 !important;
+}
+
 .svg-fill-red {
     color: #fa5a2c;
     fill: #fa5a2c;

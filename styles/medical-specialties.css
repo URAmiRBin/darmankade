@@ -1,3 +1,4 @@
+/* ========= Specialties cards ========== */
 #doctors-profile-pic img {
     border-radius: 50%;
     height: 2rem;
@@ -26,6 +27,7 @@
     font-weight: bold;
 }
 
+/* ========== Sidebar ========== */
 .asidec {
     z-index: 1!important;
     width: 100%!important;
