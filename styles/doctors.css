@@ -18,6 +18,12 @@
 .round-pic {
     border-radius: 50%;
     width: 100%;
+    height: 100%;
+}
+
+.doctor-profile-pic {
+    width: 150px!important;
+    height: 150px!important;
 }
 
 .doctor-detail-card {
@@ -186,17 +192,26 @@
 .tabs {
     border-radius: 8px 8px 0 0;
     background-color: #EDEDED;
-    cursor: pointer;
+
 }
 
-.selected-tab {
+#selected-tab {
     background-color: white!important;
     color:  #0078D7!important;
+}
+
+.visible {
+    display:flex!important;
+}
+
+.tab-content {
+    display:none;
 }
 
 .tab {
     background-color: #EDEDED;
     color:rgba(100, 100, 100, .8);
+    cursor: pointer;
 }
 
 /* ========== Users comments ========== */

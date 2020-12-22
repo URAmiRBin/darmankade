@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../libs/fontawesome-free-5.15.1-web/css/all.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/home.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/doctors.css" />
-    <link rel="stylesheet" href="../libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../libs/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../fonts/fonts.css" />
+    <link rel="stylesheet" href="libs/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/home.css" />
+    <link rel="stylesheet" type="text/css" href="styles/doctors.css" />
+    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
     <title>نورولوژی صفحه پزشکان</title>
 </head>
 
@@ -21,20 +24,20 @@
         <nav class="container">
             <div class="row-flex">
                 <div class="logo">
-                    <a href="../index.html">
-                        <img class="logo-img" src="../images/logo.svg" alt="darmankade logo">
+                    <a href="index.html">
+                        <img class="logo-img" src="images/logo.svg" alt="darmankade logo">
                     </a>
                 </div>
                 <div class="navmenu">
                     <ul>
                         <li class="nav-item">
-                            <a href="../medical-specialties.html"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
+                            <a href="medical-specialties.html"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
                         </li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-wifi"></i> مشاوره آنلاین</a></li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-book"></i> مجله پزشکی</a></li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-user-md"></i> عضویت پزشکان</a></li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-cube"></i> کرونا سازمانی</a></li>
-                        <li class="nav-item left-nav rounded"><a href="../login.html">ورود <i
+                        <li class="nav-item left-nav rounded"><a href="login.html">ورود <i
                                     class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
                     </ul>
                 </div>
@@ -44,7 +47,7 @@
 
         <!-- Navbar -->
         <div class="row-flex top-offset-more">
-            <a href="../index.html">
+            <a href="index.html">
                 <span class = "f-bold blue-text left-padding">
                     درمانکده <i class="fas fa-arrow-left icon-line-align"></i>
                 </span>
@@ -62,11 +65,11 @@
     <div class="content">
         <div class="row">
             <!-- Sidebar -->
-            <section class="col-3 no-right-padding bottom-offset-more">
+            <section class="col-3 no-right-padding bottom-offset">
                 <div class= "bottom-offset">
-                    <img class = "w-100" src="../images/corona-banner.png" alt="">
+                    <img class = "w-100" src="images/corona-banner.png" alt="">
                 </div>
-                <aside class="asidec fixed-top">
+                <aside class="asidec fixed-top bottom-offset-more">
                     <div class="card row-card-height fourside-padding-5 bottom-offset">
                         <div id="sidebar-header" class = "bottom-offset-more">
                             <p class = "padding-bottom-15 no-margin-bottom">جستجو در نتایج</p>
@@ -110,7 +113,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="card row-card-height fourside-padding-5 bottom-offset">
+                    <div class="card row-card-height fourside-padding-5">
                         <div class = "row-flex">
                             <p class="col-80 no-margin-bottom">نمایش پزشکان با مشاوره آنلاین</p>
                             <p class="col-20 ltr no-margin-bottom">
@@ -126,7 +129,7 @@
 
             <!-- Doctors List -->
             <section class="col-9 no-left-padding">
-                <div class="row bottom-offset-more">
+                <div id = "vapp" class="row bottom-offset-more">
                     <div class="row no-left-padding">
                         <div class="card fourside-padding-5 bottom-offset">
                             <div class="flex padding-bottom-up-less">
@@ -137,35 +140,34 @@
                                     مرتب سازی بر اساس:
                                 </p>
                                 <div id="filters">
-                                    <p id = "selected-filter" class = "no-margin-bottom">منتخب</p>
-                                    <p class = "fade-gray no-margin-bottom">بیشترین رضایتمندی</p>
-                                    <p class = "fade-gray no-margin-bottom">زودترین نوبت</p>
+                                    <p v-on:click="switchSort(0)" id = "selected-filter" class = "no-margin-bottom">منتخب</p>
+                                    <p v-on:click="switchSort(1)" class = "fade-gray no-margin-bottom">بیشترین رضایتمندی</p>
+                                    <p v-on:click="switchSort(2)" class = "fade-gray no-margin-bottom">زودترین نوبت</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row no-left-padding bottom-offset">
+
+                    <div v-bind:key="doc.id" v-for="doc in sortedDoctors" class = "row no-left-padding bottom-offset">
                         <div class="card card-hover padding-top-10p no-left-padding">
                             <div class="row">
                                 <div class="row col-7">
                                     <div class="col-4">
-                                        <img class = "round-pic fourside-padding-5" src="../images/doctor1.jpg" alt="">
+                                    <a v-bind:href="'doctors-personal-page.html?id=' + doc.id">
+                                        <img class = "doctor-profile-pic round-pic fourside-padding-5" v-bind:src="doc.avatar" alt="">
+                                    </a>
                                     </div>
                                     <div class="col-8">
                                         <div class = "padding-top-10p">
-                                            <p class = "f-bold f-18 no-margin-bottom">مهران جلالی</p>
-                                            <p>متخصص مغز و اعصاب (نورولوژی)</p>
+                                            <p class = "f-bold f-18 no-margin-bottom">{{doc.name}}</p>
+                                            <p>{{doc.spec}}</p>
                                             <div class = "flex">
                                                 <p class = "bottom-offset left-padding blue-text">
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
+                                                    <i v-for="index in doc.stars" class="fas fa-star icon-line-align"></i>
                                                 </p>
-                                                <p class = "f-12 fade-gray">(۴۹ نظر)</p>
+                                                <p class = "f-12 fade-gray">({{doc.comments}} نظر)</p>
                                             </div>
-                                            <p class = "fade-gray f-16">“ آقای دکتر خیلی با صبر وحوصله با بیمار برخورد میکنه. از نظر من عالی هستن😊 “</p>
+                                            <p class = "fade-gray f-16">{{doc.comment_text}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -173,166 +175,40 @@
                                     <div class="card doctor-detail-card">
                                         <p class = "fade-gray no-margin-bottom">
                                             <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
-                                            تهران | پونک
+                                            {{doc.location}}
                                         </p>
                                         <p class = "fade-gray no-margin-bottom">
                                             <i class="left-padding f-18 fas fa-book icon-line-align"></i>
-                                            تجربه کار ۲۷ سال
+                                            تجربه کار {{doc.experience_years}} سال
                                         </p>
                                         <p class = "fade-gray no-margin-bottom">
                                             <i class="left-padding f-18 fas fa-thumbs-up icon-line-align"></i>
-                                            ۹۴  درصد رضایت کاربران
+                                            {{doc.user_percent}}  درصد رضایت کاربران
                                         </p>
                                     </div>
                                     <div class="row">
                                         <div class="col-9 hover-box">
-                                            <a class="hover-btn" href="../doctors/291.html">
+                                            <a class="hover-btn" v-bind:href="'doctors-personal-page.html?id=' + doc.id">
                                                 <span class="hover-btn-descr">نوبت بگیر</span>
                                                 <div class="hover-btn-icon">
                                                     <i class="fas fa-arrow-left"></i>
                                                 </div>
                                             </a>
                                         </div>
-                                        <dov class="col-3">
+                                        <div class="col-3">
                                             <div id = "like-button">
                                                 <p class = "blue-text f-20 no-margin-bottom">
                                                     <i class="far fa-heart"></i>
                                                 </p>
                                             </div>
-                                        </dov>
+                                        </div>
                                     </div>
-                                    <p class = "text-center dark-green">اولین نوبت خالی دوشنبه ۲۴ آذر</p>
+                                    <p class = "text-center dark-green">اولین نوبت خالی {{doc.first_empty_date}}</p>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="row no-left-padding bottom-offset">
-                        <div class="card card-hover padding-top-10p no-left-padding">
-                            <div class="row">
-                                <div class="row col-7">
-                                    <div class="col-4">
-                                        <img class = "round-pic fourside-padding-5" src="../images/doctor2.png" alt="">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class = "padding-top-10p">
-                                            <p class = "f-bold f-18 no-margin-bottom">شیوا امامی</p>
-                                            <p>متخصص مغز و اعصاب (نورولوژی)</p>
-                                            <div class = "flex">
-                                                <p class = "bottom-offset left-padding blue-text">
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                </p>
-                                                <p class = "f-12 fade-gray">(۷ نظر)</p>
-                                            </div>
-                                            <p class = "fade-gray f-16">“ با سلام بسیار مهربان و با حوصله و دلسوز و با دقت و دوست داشتنی بودند. “</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-5 no-left-padding">
-                                    <div class="card doctor-detail-card">
-                                        <p class = "fade-gray no-margin-bottom">
-                                            <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
-                                            تهران | خیابان سید جمال ادین اسد آبادی
-                                        </p>
-                                        <p class = "fade-gray no-margin-bottom">
-                                            <i class="left-padding f-18 fas fa-book icon-line-align"></i>
-                                            تجربه کاری ۶ سال
-                                        </p>
-                                        <p class = "fade-gray no-margin-bottom">
-                                            <i class="left-padding f-18 fas fa-thumbs-up icon-line-align"></i>
-                                            ۱۰۰  درصد رضایت کاربران
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-9 hover-box">
-                                            <a class="hover-btn" href="#">
-                                                <span class="hover-btn-descr">نوبت بگیر</span>
-                                                <div class="hover-btn-icon">
-                                                    <i class="fas fa-arrow-left"></i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <dov class="col-3">
-                                            <div id = "like-button">
-                                                <p class = "blue-text f-20 no-margin-bottom">
-                                                    <i class="far fa-heart"></i>
-                                                </p>
-                                            </div>
-                                        </dov>
-                                    </div>
-                                    <p class = "text-center dark-green">اولین نوبت خالی چهارشنبه ۲۶ آذر</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="row no-left-padding">
-                        <div class="card card-hover padding-top-10p no-left-padding">
-                            <div class="row">
-                                <div class="row col-7">
-                                    <div class="col-4">
-                                        <img class = "round-pic fourside-padding-5" src="../images/doctor3.png" alt="">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class = "padding-top-10p">
-                                            <p class = "f-bold f-18 no-margin-bottom">زهرا شریفی بهرام</p>
-                                            <p>متخصص مغز و اعصاب (نورولوژی)</p>
-                                            <div class = "flex">
-                                                <p class = "bottom-offset left-padding blue-text">
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                    <i class="fas fa-star icon-line-align"></i>
-                                                </p>
-                                                <p class = "f-12 fade-gray">(۲ نظر)</p>
-                                            </div>
-                                            <p class = "fade-gray f-16">“ واقع بین بودن ایشان به حال بیمار و نتراشیدن هزینه های بیخود من را واقعاً تحت تاثیر قرار داد، و کلی از ایشان انرژی گرفتم، برخلا ... “</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-5 no-left-padding">
-                                    <div class="card doctor-detail-card">
-                                        <p class = "fade-gray no-margin-bottom">
-                                            <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
-                                            تهران | کوی نصر (گیشا)
-                                        </p>
-                                        <p class = "fade-gray no-margin-bottom">
-                                            <i class="left-padding f-18 fas fa-book icon-line-align"></i>
-                                            تجربه کاری ۵ سال
-                                        </p>
-                                        <p class = "fade-gray no-margin-bottom">
-                                            <i class="left-padding f-18 fas fa-thumbs-up icon-line-align"></i>
-                                            ۱۰۰  درصد رضایت کاربران
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-9 hover-box">
-                                            <a class="hover-btn" href="#">
-                                                <span class="hover-btn-descr">نوبت بگیر</span>
-                                                <div class="hover-btn-icon">
-                                                    <i class="fas fa-arrow-left"></i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <dov class="col-3">
-                                            <div id = "like-button">
-                                                <p class = "blue-text f-20 no-margin-bottom">
-                                                    <i class="far fa-heart"></i>
-                                                </p>
-                                            </div>
-                                        </dov>
-                                    </div>
-                                    <p class = "text-center dark-green">اولین نوبت خالی دوشنبه ۲۴ آذر</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+                    
                 </div>
             </section>
         </div>
@@ -451,7 +327,7 @@
             <p class = "text-center wide white-text f-24 f-bold bottom-offset-more">خدمات ویژه درمانکده برای کووید</p>
             <div class = "services-content">
                 <div class = "col-50 sides-margin-med">
-                    <img class = "service-img bottom-offset-more" src="../images/services1.png" alt="">
+                    <img class = "service-img bottom-offset-more" src="images/services1.png" alt="">
                     <p class = "text-center white-text f-bold bottom-offset">تست PCR و آنتی بادی در محل</p>
                     <p class = "white-text bottom-offset"> اگر در شهرهای تهران، مشهد، اصفهان، کرج، شیراز و اهواز هستید، می‌توانید بدون مراجعه به آزمایشگاه و در محل مدنظر خود آزمایش کرونا بدهید.</p>
                     <button class = "services-btn bottom-offset top-offset">
@@ -461,7 +337,7 @@
                     </button>                    
                 </div>
                 <div class = "col-50 sides-margin-med">
-                    <img class = "service-img bottom-offset-more" src="../images/services2.png" alt="">
+                    <img class = "service-img bottom-offset-more" src="images/services2.png" alt="">
                     <p class = "text-center white-text f-bold bottom-offset">مشاوره آنلاین کرونا</p>
                     <p class = "white-text bottom-offset">با تست آنلاین کرونا علائم خود را بررسی کنید و اگر مشکوک بودید میتوانید به صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید.</p>
                     <button class = "services-btn bottom-offset top-offset">
@@ -479,16 +355,16 @@
         <div class = "content">
             <div class = "row-flex">
                 <div class = "col-41">
-                    <img class = "download-img" src="../images/signup.png" alt="">
+                    <img class = "download-img" src="images/signup.png" alt="">
                     <div class = "download-stores">
                         <a href="">
-                            <img src="../images/play store.png" alt="">
+                            <img src="images/play store.png" alt="">
                         </a>
                         <a href="">
-                            <img src="../images/apple.png" alt="">
+                            <img src="images/apple.png" alt="">
                         </a>
                         <a href="">
-                            <img src="../images/bazaar.png" alt="">
+                            <img src="images/bazaar.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -520,7 +396,7 @@
         <div class="footer-container">
             <div class="row-flex bottom-offset top-offset-more">
                 <div class="col-33">
-                    <img class="wide bottom-offset" src="../images/logo_invert.svg" alt="logo">
+                    <img class="wide bottom-offset" src="images/logo_invert.svg" alt="logo">
                     <p class="wide">درمانکده، ارائه دهنده خدمات آنلاین سلامت
                         <br>(نوبت گیری اینترنتی، مشاوره آنلاین و ...)
                     </p>
@@ -557,12 +433,12 @@
                     <div class="row-flex e-namad bottom-offset-more">
                         <div class="card">
                             <a href="">
-                                <img src="../images/enamad.png" alt="">
+                                <img src="images/enamad.png" alt="">
                             </a>
                         </div>
                         <div class="card">
                             <a href="">
-                                <img src="../images/samandehi.png" alt="">
+                                <img src="images/samandehi.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -624,6 +500,60 @@
             <p class = "f-12 col-50 ltr">طراحی شده بی <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg> توسط امیربین</p>
         </div>
     </section>
+
+
+
+    <script type= "module">
+
+        const vueApp = new Vue({
+            el: '#vapp',
+            data() {
+                return {
+                    "selectedFilter": 0,
+                    "doctors": []
+                }
+            },
+            methods: {
+
+            simplefill() {
+                this.doctors = [{id: 0, name: "yes"}, {id: 1, name: "no"}];
+            },
+
+            read() {
+            axios.get('https://intense-ravine-40625.herokuapp.com/doctors').then(
+                response => {
+                this.doctors = response.data;
+                }
+            ).catch((err) => console.error(err));
+            },
+
+            switchSort(filterNumber) {
+                var filters = document.getElementById("filters").children;
+                for (let i = 0; i < filters.length; i++) {
+                    if(i != filterNumber) {
+                        filters[i].setAttribute("id", "");
+                    } else {
+                        filters[i].setAttribute("id", "selected-filter");
+                    }
+                }
+                this.selectedFilter = filterNumber;
+            }
+
+            },
+            computed: {
+            sortedDoctors() {
+                if (this.selectedFilter == 1) {
+                    return _.orderBy(this.doctors, 'user_percent', 'desc'); 
+                } else {
+                    return _.orderBy(this.doctors, 'id', 'asc'); 
+                }
+            }
+            },
+            mounted() {
+                this.read();
+            }
+        })
+    </script>
 </body>
 
 </html>

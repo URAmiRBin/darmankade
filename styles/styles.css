@@ -91,6 +91,10 @@ body {
     width: 100%;
 }
 
+.w-10 {
+    width: 10%;
+}
+
 .max-height {
     min-height: 100vh;
 }
@@ -229,6 +233,12 @@ body {
     justify-content: center;
 }
 
+.just-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .icon-line-align {
     padding-right: 5px;
     padding-top: 4px;
@@ -261,8 +271,9 @@ body {
 }
 
 .light-grey-bg {
-    background-color: #EDEDED;
+    background-color: #EDEDED!important;
 }
+
 
 /* Links */
 .link {

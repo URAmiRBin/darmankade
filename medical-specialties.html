@@ -8,10 +8,15 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
     <link rel="stylesheet" type="text/css" href="styles/home.css" />
     <link rel="stylesheet" type="text/css" href="styles/medical-specialties.css" />
-    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
+    
+    
+    
+    
     <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="fonts/fonts.css" />
+    
     <title>لیست تخصص ها</title>
 </head>
 
@@ -43,9 +48,24 @@
         </nav>
 
         <!-- Slidshow  -->
-        <div class="row bottom-offset-more">
-            <img src="images/slider.png" class="w-100" alt="">
-        </div>
+        <div id="carouselExampleControls" class="bottom-offset-more carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/slider.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/slider2.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
     </header>
 
     <div class="content">
@@ -201,7 +221,11 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/kidney.svg">
-                                    <h5 class="vertical-center">گوارش و کبد</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                            گوارش و کبد
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
@@ -215,7 +239,7 @@
                                         <p class = " f-16"> + ۱۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -228,7 +252,9 @@
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset" src="images/spec/nose.svg">
-                                    <h5 class="vertical-center">گوش، حلق و بینی</h5>
+                                    <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        <h5 class="vertical-center">گوش، حلق و بینی</h5>
+                                    </a>
                                 </div>
                                 <p class="f-16 card-text">
                                     پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
@@ -242,7 +268,7 @@
                                         <p class = " f-16"> + ۱۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -256,7 +282,7 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/brain.svg">
-                                        <a href="specialties/neurologist.html" class = "no-decoration vertical-center" style="color: black">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
                                             <h5>مغز و اعصاب</h5>
 
                                         </a>
@@ -271,7 +297,7 @@
                                         <p class = " f-16"> + ۱۳ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="specialties/neurologist.html"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -287,7 +313,11 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/blood.svg">
-                                    <h5 class="vertical-center">خون و انکلوژی</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        خون و انکلوژی
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
@@ -301,7 +331,7 @@
                                         <p class = " f-16"> + ۵ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -315,7 +345,12 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/feetus.svg">
-                                    <h5 class="vertical-center">زنان و زایمان</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+
+                                        زنان و زایمان
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
@@ -329,7 +364,7 @@
                                         <p class = " f-16"> + ۱۳ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -342,7 +377,12 @@
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more" src="images/spec/hair.svg">
-                                    <h5 class="vertical-center">پوست و مو</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        
+                                        پوست و مو
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
@@ -354,7 +394,7 @@
                                         <p class = " f-16"> + ۲۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -369,7 +409,11 @@
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 " src="images/spec/knife.svg">
-                                    <h6 class="vertical-center f-bold f-18">جراحی مغز و اعصاب</h5>
+                                    <h6 class="vertical-center f-bold f-18">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        جراحی مغز و اعصاب
+                                        </a>
+                                    </h6>
                                 </div>
                                 <p class="f-16 card-text">
                                     متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
@@ -383,7 +427,7 @@
                                         <p class = " f-16"> + ۲۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -397,7 +441,11 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/brainfuck.svg">
-                                    <h5 class="vertical-center">روان پزشک</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        روان پزشک
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
@@ -411,7 +459,7 @@
                                         <p class = " f-16"> + ۵ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -425,7 +473,12 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/spine.svg">
-                                    <h5 class="vertical-center">روماتولوژی</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+
+                                        روماتولوژی
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
@@ -437,7 +490,7 @@
                                         <p class = " f-16"> + ۱۳ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -453,7 +506,11 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/kidney.svg">
-                                    <h5 class="vertical-center">گوارش و کبد</h5>
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                            گوارش و کبد
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
@@ -464,10 +521,10 @@
                                         <img src="images/doctors/d1.png" alt=""">
                                         <img class = " absolute-1" src="images/doctor.jpg" alt=""">
                                         <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
-                                        <p class = " f-16"> + ۲۰ دکتر</p>
+                                        <p class = " f-16"> + ۱۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -480,21 +537,23 @@
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset" src="images/spec/nose.svg">
-                                    <h5 class="vertical-center">گوش، حلق و بینی</h5>
+                                    <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        <h5 class="vertical-center">گوش، حلق و بینی</h5>
+                                    </a>
                                 </div>
                                 <p class="f-16 card-text">
                                     پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
-                                     ...
+                                    ...
                                 </p>
                                 <div class="row-flex">
                                     <div id="doctors-profile-pic" class="col-50">
                                         <img src="images/doctors/d3.jpg" alt=""">
                                         <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
                                         <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
-                                        <p class = " f-16"> + ۵ دکتر</p>
+                                        <p class = " f-16"> + ۱۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -508,7 +567,10 @@
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
                                         src="images/spec/brain.svg">
-                                    <h5 class="vertical-center">مغز و اعصاب</h5>
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                            <h5>مغز و اعصاب</h5>
+
+                                        </a>
                                 </div>
                                 <p class="f-16 card-text">
                                     سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
@@ -517,10 +579,10 @@
                                         <img src="images/doctors/d6.jpg" alt=""">
                                         <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
                                         <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
-                                        <p class = " f-16"> + ۲۰ دکتر</p>
+                                        <p class = " f-16"> + ۱۳ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -534,8 +596,13 @@
                         <div class="card card-hover" style="width: 100%;">
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
-                                    <img class="rounded fourside-padding-5 " src="images/spec/knife.svg">
-                                    <h6 class="vertical-center f-bold f-18">جراحی مغز و اعصاب</h5>
+                                    <img class="rounded fourside-padding-5 left-offset-more"
+                                        src="images/spec/blood.svg">
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        خون و انکلوژی
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     متخصص گوارش، کبد و آندوسکوپی پزشکی که بر سلامت گوارش تمرکز دارد و در زمینه تشخیص،
@@ -546,10 +613,10 @@
                                         <img src="images/doctors/d1.png" alt=""">
                                         <img class = " absolute-1" src="images/doctor.jpg" alt=""">
                                         <img class = " absolute-2" src="images/doctors/d2.jpg" alt=""">
-                                        <p class = " f-16"> + ۲۰ دکتر</p>
+                                        <p class = " f-16"> + ۵ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -562,8 +629,13 @@
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
                                     <img class="rounded fourside-padding-5 left-offset-more"
-                                        src="images/spec/brainfuck.svg">
-                                    <h5 class="vertical-center">روان پزشک</h5>
+                                        src="images/spec/feetus.svg">
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+
+                                        زنان و زایمان
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     پزشکی که در زمینه تشخیص، مراقبت‌های پزشکی، جراحی و درمان بیمارانی که دچار اختلالات
@@ -574,10 +646,10 @@
                                         <img src="images/doctors/d3.jpg" alt=""">
                                         <img class = " absolute-1" src="images/doctors/d4.jpg" alt=""">
                                         <img class = " absolute-2" src="images/doctors/d5.jpg" alt=""">
-                                        <p class = " f-16"> + ۲۶ دکتر</p>
+                                        <p class = " f-16"> + ۱۳ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -589,9 +661,13 @@
                         <div class="card card-hover" style="width: 100%;">
                             <div class="card-body">
                                 <div class="row-flex bottom-offset-more">
-                                    <img class="rounded fourside-padding-5 left-offset-more"
-                                        src="images/spec/spine.svg">
-                                    <h5 class="vertical-center">روماتولوژی</h5>
+                                    <img class="rounded fourside-padding-5 left-offset-more" src="images/spec/hair.svg">
+                                    <h5 class="vertical-center">
+                                        <a href="doctors-list.html" class = "no-decoration vertical-center" style="color: black">
+                                        
+                                        پوست و مو
+                                        </a>
+                                    </h5>
                                 </div>
                                 <p class="f-16 card-text">
                                     سیستم عصبی انسان به دو دسته‌ی کلی اعصاب مرکزی (مغز و نخاع) و اعصاب محیطی ... </p>
@@ -600,10 +676,10 @@
                                         <img src="images/doctors/d6.jpg" alt=""">
                                         <img class = " absolute-1" src="images/doctors/d7.jpg" alt=""">
                                         <img class = " absolute-2" src="images/doctors/d8.jpg" alt=""">
-                                        <p class = " f-16"> + ۲۶ دکتر</p>
+                                        <p class = " f-16"> + ۲۰ دکتر</p>
                                     </div>
                                     <div class="col-50">
-                                        <a href="#"
+                                        <a href="doctors-list.html"
                                             class="btn btn-primary-orange w-100 fourside-padding-5 padding-btn-top-bottom">مشاهده
                                             <i class="fas fa-arrow-left icon-line-align"></i></a>
                                     </div>
@@ -612,6 +688,7 @@
                         </div>
                     </div>
                 </div>
+                
             </section>
         </div>
     </div>
@@ -726,6 +803,7 @@
             <p class = "f-12 col-50 ltr">طراحی شده بی <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg> توسط امیربین</p>
         </div>
     </section>
+
 </body>
 
 </html>

@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../libs/fontawesome-free-5.15.1-web/css/all.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/home.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/doctors.css" />
-    <link rel="stylesheet" href="../libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="../libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../libs/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../fonts/fonts.css" />
+    <link rel="stylesheet" href="libs/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/home.css" />
+    <link rel="stylesheet" type="text/css" href="styles/doctors.css" />
+    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="libs/bootstrap-5.0.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
     <title>صفحه دکتر جلالی</title>
 </head>
 
@@ -21,20 +24,20 @@
         <nav class="container">
             <div class="row-flex">
                 <div class="logo">
-                    <a href="../index.html">
-                        <img class="logo-img" src="../images/logo.svg" alt="darmankade logo">
+                    <a href="index.html">
+                        <img class="logo-img" src="images/logo.svg" alt="darmankade logo">
                     </a>
                 </div>
                 <div class="navmenu">
                     <ul>
                         <li class="nav-item">
-                            <a href="../medical-specialties.html"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
+                            <a href="medical-specialties.html"><i class="fa fa-bars"></i> لیست تخصص ها</i></a>
                         </li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-wifi"></i> مشاوره آنلاین</a></li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-book"></i> مجله پزشکی</a></li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-user-md"></i> عضویت پزشکان</a></li>
                         <li class="nav-item"><a href="#home"><i class="fa fa-cube"></i> کرونا سازمانی</a></li>
-                        <li class="nav-item left-nav rounded"><a href="../login.html">ورود <i
+                        <li class="nav-item left-nav rounded"><a href="login.html">ورود <i
                                     class="fa fa-sign-in-alt fa-flip-horizontal"></i></a></li>
                     </ul>
                 </div>
@@ -44,18 +47,19 @@
 
         <!-- Top of the page -->
         <div class="row-flex top-offset-more">
-            <a href="../index.html">
+            <a href="index.html">
                 <span class="f-bold blue-text left-padding">
                     درمانکده <i class="fas fa-arrow-left icon-line-align"></i>
                 </span>
             </a>
-            <a href="../specialties/neurologist.html">
-                <p class="f-bold blue-text left-padding">
-                    متخصص مغز و اعصاب <i class="fas fa-arrow-left icon-line-align"></i>
+            <a href="#">
+                <p id = "doctor-spec" class="f-bold blue-text left-padding">
+                    متخصص مغز و اعصاب 
                 </p>
             </a>
-            <a href="">
-                <p class="fade-gray f-16">
+            <i class="fas left-padding blue-text fa-arrow-left icon-line-align"></i>
+            <a href="#">
+                <p id = "doctor-name" class="fade-gray f-16">
                     دکتر مهران جلالی
                 </p>
             </a>
@@ -65,7 +69,7 @@
     </header>
 
     <!-- Top of the Page -->
-    <div class="content">
+    <div id = "vapp" class="content">
         <class class="row">
             <section id="doctor-card" class="col-4 no-right-padding bottom-offset-lot">
                 <aside class="asidec fixed-top">
@@ -83,10 +87,10 @@
                                 </svg>
                             </div>
                             <div class="col-8 text-center white-text">
-                                <img class="row round-pic auto-margin" src="../images/doctor1.jpg" alt="">
-                                <p class="f-bold top-offset f-18 bottom-offset">مهران جلالی</p>
-                                <p class="bottom-offset">متخصص مغز و اعصاب</p>
-                                <p class="f-16 bottom-offset-more">شماره نظام پزشکی: ۸۰۴۵۶</p>
+                                <img class="row doctor-profile-pic round-pic auto-margin" v-bind:src="doctors.avatar" alt="">
+                                <p class="f-bold top-offset f-18 bottom-offset">{{doctors.name}}</p>
+                                <p class="bottom-offset">{{doctors.spec}}</p>
+                                <p class="f-16 bottom-offset-more">شماره نظام پزشکی: {{doctors.number}}</p>
                             </div>
                             <div class="col-2">
                                 <svg class = "clickable" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"
@@ -102,17 +106,18 @@
                             <div class="col-4 padding-top-10p">
                                 <i class="left-padding f-18 fas fa-book icon-line-align"></i>
                                 <p class="bottom-offset f-16">تجربه</p>
-                                <p class="f-bold">۲۷ سال</p>
+                                <p class="f-bold">{{doctors.experience_years}} سال</p>
                             </div>
                             <div class="col-4 padding-top-10p">
                                 <i class="left-padding f-18 fas fa-book icon-line-align"></i>
                                 <p class="bottom-offset f-16">اولین نوبت آزاد</p>
-                                <p class="f-bold">۳ آذر</p>
+                                <p class="f-bold">{{doctors.first_empty_date}}</p>
                             </div>
                             <div class="col-4 padding-top-10p">
                                 <i class="left-padding f-18 fas fa-book icon-line-align"></i>
                                 <p class="bottom-offset f-16">پرداخت آنلاین</p>
-                                <p class="f-bold">دارد</p>
+                                <p v-if="doctors.online_pay == true" class="f-bold">دارد</p>
+                                <p v-else class="f-bold">ندارد</p>
                             </div>
                         </div>
                     </div>
@@ -229,28 +234,23 @@
                         <div class="col-2">
                             <div class="card no-border col-8 auto-margin light-blue-bg text-center">
                                 <p class="blue-text f-32 f-bold top-offset-less no-margin-bottom">
-                                    ۴.۸
+                                    {{doctors.rate}}
                                 </p>
                                 <p class="blue-text no-margin-bottom f-10">
-                                    <i class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
-                                    <i class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
-                                    <i class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
-                                    <i class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
-                                    <i class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
+                                    <i v-for="index in doctors.stars" class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
                                 </p>
                                 <p class="fade-gray f-16 no-margin-bottom">
-                                    از ۴۹ نظر
+                                    از {{doctors.comments}} نظر
                                 </p>
                             </div>
                         </div>
                         <div class="col-10 right-padding">
                             <p class="fade-gray">
                                 <i class="fas fa-comment left-padding"></i>
-                                نظر محسن:
+                                نظر {{doctors.commenter}}:
                             </p>
                             <p class="no-margin-bottom">
-                                بسیار خوب و با آرامش پذیرای بیمار هستن و حتی برای سوال راجع به بیماری نوعی میپرسن که
-                                احتمال ناراحتی رو به بیمار ندن . و خیلی خوشحال هستم که دستگاه نوا
+                                {{doctors.comment_text}}
                             </p>
                             <div id="comment-bullets" class="top-offset">
                                 <p class="no-margin-bottom text-center">
@@ -266,36 +266,51 @@
                 </div>
 
                 <!-- Matab information -->
-                <div class="card bottom-offset">
-                    <div class="row-flex tabs">
-                        <div class="tab selected-tab fourside-padding-15">
+                <div id="tab-container" class="card bottom-offset">
+                    <div id = "tab-selectors" class="row-flex tabs">
+                        <div v-on:click="selectTab(0)" id = "selected-tab" class="tab fourside-padding-15">
                             <p class="no-margin-bottom f-18">
                                 <i class="fas left-padding fa-map icon-line-align"></i>
                                 اطلاعات مطب
                             </p>
                         </div>
-                        <div class="tab  fourside-padding-15">
+                        <div v-on:click="selectTab(1)" class="tab fourside-padding-15">
                             <p class="no-margin-bottom f-18">
                                 <i class="fas left-padding fa-calendar icon-line-align"></i>
                                 روزهای حضور
                             </p>
                         </div>
                     </div>
-                    <div class="row-flex">
+                    <div class="visible tab-content">
                         <div class="col-5 fourside-padding-15">
-                            <img src="../images/map.png" class="rounded-15p w-100" alt="">
+                            <img src="images/map.png" class="rounded-15p w-100" alt="">
                         </div>
                         <div class="col-7 fourside-padding-15 fade-black">
                             <p class="f-bold"> آدرس مطب ۱</p>
                             <p class="f-16">
-                                چهارراه پونک، خیابان میرزابابایی، روبروی درب پارکینگ شهروند، ساختمان پزشکان پونک، طبقه ۴
+                                {{doctors.address}}
                             </p>
                             <p>
                                 <span class="f-bold">
                                     تلفن گویا:
                                 </span>
-                                02162743210
+                                {{doctors.phone}}
                             </p>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="fourside-padding-15 wide just-between">
+                            <div v-for="(day, index) in doctors.week_days" class="card w-10 fade-black no-border light-grey-bg text-center">
+                                <p class="f-bold bottom-offset-less">{{weekdays[index]}}</p>
+                                <p v-if="day == true">
+                                    <i class="fas fa-check icon-line-align" style="color: green;"></i>
+                                </p>
+                                <p v-else>
+                                    <i class="fas fa-times icon-line-align" style="color: red;"></i>
+                                </p>
+                            </div>
+                            
+
                         </div>
                     </div>
                 </div>
@@ -710,7 +725,7 @@
             <p class="text-center wide white-text f-24 f-bold bottom-offset-more">خدمات ویژه درمانکده برای کووید</p>
             <div class="services-content">
                 <div class="col-50 sides-margin-med">
-                    <img class="service-img bottom-offset-more" src="../images/services1.png" alt="">
+                    <img class="service-img bottom-offset-more" src="images/services1.png" alt="">
                     <p class="text-center white-text f-bold bottom-offset">تست PCR و آنتی بادی در محل</p>
                     <p class="white-text bottom-offset"> اگر در شهرهای تهران، مشهد، اصفهان، کرج، شیراز و اهواز هستید،
                         می‌توانید بدون مراجعه به آزمایشگاه و در محل مدنظر خود آزمایش کرونا بدهید.</p>
@@ -721,7 +736,7 @@
                     </button>
                 </div>
                 <div class="col-50 sides-margin-med">
-                    <img class="service-img bottom-offset-more" src="../images/services2.png" alt="">
+                    <img class="service-img bottom-offset-more" src="images/services2.png" alt="">
                     <p class="text-center white-text f-bold bottom-offset">مشاوره آنلاین کرونا</p>
                     <p class="white-text bottom-offset">با تست آنلاین کرونا علائم خود را بررسی کنید و اگر مشکوک بودید
                         میتوانید به صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید.</p>
@@ -740,16 +755,16 @@
         <div class="content">
             <div class="row-flex">
                 <div class="col-41">
-                    <img class="download-img" src="../images/signup.png" alt="">
+                    <img class="download-img" src="images/signup.png" alt="">
                     <div class="download-stores">
                         <a href="">
-                            <img src="../images/play store.png" alt="">
+                            <img src="images/play store.png" alt="">
                         </a>
                         <a href="">
-                            <img src="../images/apple.png" alt="">
+                            <img src="images/apple.png" alt="">
                         </a>
                         <a href="">
-                            <img src="../images/bazaar.png" alt="">
+                            <img src="images/bazaar.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -783,7 +798,7 @@
         <div class="footer-container">
             <div class="row-flex bottom-offset top-offset-more">
                 <div class="col-33">
-                    <img class="wide bottom-offset" src="../images/logo_invert.svg" alt="logo">
+                    <img class="wide bottom-offset" src="images/logo_invert.svg" alt="logo">
                     <p class="wide">درمانکده، ارائه دهنده خدمات آنلاین سلامت
                         <br>(نوبت گیری اینترنتی، مشاوره آنلاین و ...)
                     </p>
@@ -820,12 +835,12 @@
                     <div class="row-flex e-namad bottom-offset-more">
                         <div class="card">
                             <a href="">
-                                <img src="../images/enamad.png" alt="">
+                                <img src="images/enamad.png" alt="">
                             </a>
                         </div>
                         <div class="card">
                             <a href="">
-                                <img src="../images/samandehi.png" alt="">
+                                <img src="images/samandehi.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -887,6 +902,78 @@
             <p class = "f-12 col-50 ltr">طراحی شده بی <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg> توسط امیربین</p>
         </div>
     </section>
+
+
+    <script type= "module">
+        const vueApp = new Vue({
+            el: '#vapp',
+            data() {
+                return {
+                    "selected-tab": 1,
+                    "doctors": [],
+                    "weekdays": ["شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه"]
+                }
+            },
+            methods: {
+
+            getQueryVariable(variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split('&');
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split('=');
+                    if (decodeURIComponent(pair[0]) == variable) {
+                        return decodeURIComponent(pair[1]);
+                    }
+                }
+                console.log('Query variable %s not found', variable);
+            },
+
+            selectTab(tabNumber) {
+                var tabs = document.getElementById("tab-selectors").children;
+                var tabContents = document.getElementById("tab-container").children;
+                for(let i = 0; i < tabs.length; i++) {
+                    if(i != tabNumber) {
+                        tabs[i].setAttribute("id", "");
+                    } else {
+                        tabs[i].setAttribute("id", "selected-tab");
+                    }
+                }
+                console.log(tabContents.length);
+                for(let i = 1; i< tabContents.length; i++) {
+                    if(i != tabNumber + 1) {
+                        tabContents[i].setAttribute("class", "tab-content");
+                    } else {
+                        tabContents[i].setAttribute("class", "tab-content visible");
+                    }
+                }
+
+            },
+
+            read(id) {
+                var s = document.getElementById("doctor-spec");
+                var n = document.getElementById("doctor-name");
+
+                var url = 'https://intense-ravine-40625.herokuapp.com/doctors/' + id;
+                axios.get(url).then(
+                response => {
+                this.doctors = response.data;
+                s.innerHTML = response.data.spec;
+                n.innerHTML = response.data.name;
+                }
+            ).catch((err) => console.error(err));
+            
+            },
+
+            
+
+            },
+            
+            mounted() {
+                this.read(this.getQueryVariable('id'));
+                
+            }
+        })
+    </script>
 </body>
 
 </html>
