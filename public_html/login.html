@@ -19,18 +19,19 @@
             </div>
         </div>
         <div class = "col-66 white-alt-bg max-height center-center">
-            <div class ="col-50 text-center">
-                <p class = "f-bold fade-black bottom-offset-lot">برای ورود شماره همراه خود را وارد کنید.</p>
-                <input type="text" class = "row-flex bottom-offset-more" name="phone" placeholder="مانند *********۰۹">
-                <p id = "input-head" class = "fade-black">شماره همراه</p>
-                <button class = "row-flex btn-base btn-orange bottom-offset">
+            <form class ="col-50 text-center">
+                <p class = "f-bold fade-black bottom-offset-lot">برای ورود اطلاعات خود را وارد کنید.</p>
+                <input name= "username" type="text" class = "row-flex bottom-offset-more" name="phone" placeholder="نام کاربری" required>
+                <input name = "password" type="password" class = "row-flex bottom-offset-more" name="phone" placeholder="رمز عبور" required minlength="8">
+                
+                <button type="submit" class = "row-flex btn-base btn-orange bottom-offset">
                     <p class = "wide text-center f-18">
-                        دریافت کد تایید<i class="fas fa-arrow-left icon-line-align"></i>
+                        ورود<i class="fas fa-arrow-left icon-line-align"></i>
                     </p>
                 </button>    
-                <button class = "col-33 btn-base btn-orange-invert bottom-offset-lot">
+                <button type="button" onclick="location.href='register.html'" class = "col-33 btn-base btn-orange-invert bottom-offset-lot">
                     <p class = "text-center f-18">
-                        کد معرف دارید؟
+                        ثبت نام
                     </p>
                 </button>
                 <a href="">
@@ -41,7 +42,7 @@
                         </a>
                     </div>
                 </a>
-            </div>
+            </form>
         </div>
     </div>
 </body>

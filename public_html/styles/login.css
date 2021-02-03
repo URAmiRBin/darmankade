@@ -22,7 +22,7 @@ input[type=text]:focus {
     box-shadow: 1px 1px 5px #0078D7;
 }
 
-#input-head {
+.input-head {
     position: absolute;
     top: 225px;
     right: 780px;
