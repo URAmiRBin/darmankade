@@ -38,3 +38,17 @@ input[type=text]:focus {
 button {
     cursor: pointer;
 }
+
+.doctors-days-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.doctors-days-form p {
+    padding: 0 0 0 0;
+    margin:  0 0 0 0;
+}
+
+fieldset {
+    border: none;
+}

@@ -22,6 +22,10 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 		handler.LoginHandler(w, r)
 	case "/register.html":
 		handler.RegisterHandler(w, r)
+	case "/doctor-register.html":
+		handler.DoctorRegisterHandler(w, r)
+	case "/doctor-login.html":
+		handler.DoctorLoginHandler(w, r)
 	default:
 		http.ServeFile(w, r, "./public_html"+p)
 	}

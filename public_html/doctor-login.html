@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel = "stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/login.css" />
+    <title>ورود</title>
+</head>
+<body>
+    <div class = "row-flex">
+        <div class = "col-33 blue-bg max-height center-center">
+            <div class = "col-80 text-center">
+                <img id = "login-logo" class = "bottom-offset" src="images/logo_invert.svg" alt="">
+                <p class = "white-text f-bold f-20 bottom-offset-more">به درمانکده خوش آمدید</p>
+                <p class = "white-text">نوبت دهی آنلاین مطب پزشکان</p>
+            </div>
+        </div>
+        <div class = "col-66 white-alt-bg max-height center-center">
+            <form class ="col-50 text-center">
+                <p class = "f-bold fade-black bottom-offset-lot">برای ورود اطلاعات خود را وارد کنید.</p>
+                <input type="text" class = "row-flex bottom-offset-more" name="number" placeholder="شماره نظام پزشکی" required>
+                <input type="password" class = "row-flex bottom-offset-more" name="password" placeholder="رمز عبور" required minlength="8">
+                
+                <button type="submit" class = "row-flex btn-base btn-orange bottom-offset">
+                    <p class = "wide text-center f-18">
+                        ورود<i class="fas fa-arrow-left icon-line-align"></i>
+                    </p>
+                </button>    
+                <button type="button" onclick="location.href='doctor-register.html'" class = "col-33 btn-base btn-orange-invert bottom-offset-lot">
+                    <p class = "text-center f-18">
+                        ثبت نام
+                    </p>
+                </button>
+                <a href="">
+                    <div class="col-20 auto-align">
+                        <img src="images/google.png" id = "google-login" alt="">
+                        <a href="" class = "link no-hover">
+                            <p class = "dashed-border f-bold">ورود با گوگل</p>
+                        </a>
+                    </div>
+                </a>
+            </form>
+        </div>
+    </div>
+</body>
