@@ -153,7 +153,7 @@
                             <div class="row">
                                 <div class="row col-7">
                                     <div class="col-4">
-                                    <a v-bind:href="'doctors-personal-page.html?id=' + doc.id">
+                                    <a v-bind:href="'doctors-personal-page.html?id=' + doc.number">
                                         <img class = "doctor-profile-pic round-pic fourside-padding-5" v-bind:src="doc.avatar" alt="">
                                     </a>
                                     </div>
@@ -175,7 +175,7 @@
                                     <div class="card doctor-detail-card">
                                         <p class = "fade-gray no-margin-bottom">
                                             <i class="left-padding f-18 fas fa-map-marker-alt icon-line-align"></i>
-                                            {{doc.location}}
+                                            {{doc.address}}
                                         </p>
                                         <p class = "fade-gray no-margin-bottom">
                                             <i class="left-padding f-18 fas fa-book icon-line-align"></i>
@@ -188,7 +188,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-9 hover-box">
-                                            <a class="hover-btn" v-bind:href="'doctors-personal-page.html?id=' + doc.id">
+                                            <a class="hover-btn" v-bind:href="'doctors-personal-page.html?id=' + doc.number">
                                                 <span class="hover-btn-descr">نوبت بگیر</span>
                                                 <div class="hover-btn-icon">
                                                     <i class="fas fa-arrow-left"></i>
@@ -519,12 +519,33 @@
                 this.doctors = [{id: 0, name: "yes"}, {id: 1, name: "no"}];
             },
 
-            read() {
-            axios.get('https://intense-ravine-40625.herokuapp.com/doctors').then(
-                response => {
-                this.doctors = response.data;
+            read(ids) {
+                console.log(ids);
+                for(let i = 0; i < ids.length; i++) {
+                    var req = 'http://localhost:8000/api/get/' + ids[i]
+                    console.log(req)
+                    axios.get(req).then(
+                        response => {
+                        this.doctors.push(response.data);
+                        }
+                    ).catch((err) => console.error(err));
                 }
-            ).catch((err) => console.error(err));
+            },
+
+            getQueryVariable(variable) {
+                var ids = []
+                var query = window.location.search.substring(1);
+                var vars = query.split('&');
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split('=');
+                    if (decodeURIComponent(pair[0]) == variable) {
+                        ids.push(decodeURIComponent(pair[1]));
+                    }
+                }
+                if (ids.length != 0) {
+                    return ids;
+                }
+                console.log('Query variable %s not found', variable);
             },
 
             switchSort(filterNumber) {
@@ -550,7 +571,8 @@
             }
             },
             mounted() {
-                this.read();
+                this.read(this.getQueryVariable('id'));
+                console.log(this.doctors);
             }
         })
     </script>

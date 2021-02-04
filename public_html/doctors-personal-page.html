@@ -929,6 +929,7 @@
             },
 
             selectTab(tabNumber) {
+                console.log(this.doctors)
                 var tabs = document.getElementById("tab-selectors").children;
                 var tabContents = document.getElementById("tab-container").children;
                 for(let i = 0; i < tabs.length; i++) {
@@ -953,7 +954,9 @@
                 var s = document.getElementById("doctor-spec");
                 var n = document.getElementById("doctor-name");
 
-                var url = 'https://intense-ravine-40625.herokuapp.com/doctors/' + id;
+                // var url = 'https://intense-ravine-40625.herokuapp.com/doctors/' + id;
+                var url = 'http://localhost:8000/api/get/' + id;
+                console.log(url)
                 axios.get(url).then(
                 response => {
                 this.doctors = response.data;
@@ -961,6 +964,8 @@
                 n.innerHTML = response.data.name;
                 }
             ).catch((err) => console.error(err));
+
+                
             
             },
 
@@ -970,7 +975,6 @@
             
             mounted() {
                 this.read(this.getQueryVariable('id'));
-                
             }
         })
     </script>

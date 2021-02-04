@@ -51,9 +51,11 @@ func DoctorRegisterHandler(w http.ResponseWriter, r *http.Request) {
 			}
 		}
 
+		avatar := "/images/doctor3.png"
+
 		doctor := model.Doctor{Name: username[0],
 			SpecID:     specId,
-			Avatar:     "/images/doctor3.png",
+			Avatar:     avatar,
 			Password:   password,
 			Number:     number,
 			Online:     isOnline,

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/URAmiRBin/darmankade/handler"
 )
@@ -15,17 +16,20 @@ func main() {
 
 func serveFiles(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.URL.Path)
-	switch p := r.URL.Path; p {
-	case "/":
+	p := r.URL.Path
+	switch {
+	case p == "/":
 		handler.IndexHandler(w, r)
-	case "/login.html":
+	case p == "/login.html":
 		handler.LoginHandler(w, r)
-	case "/register.html":
+	case p == "/register.html":
 		handler.RegisterHandler(w, r)
-	case "/doctor-register.html":
+	case p == "/doctor-register.html":
 		handler.DoctorRegisterHandler(w, r)
-	case "/doctor-login.html":
+	case p == "/doctor-login.html":
 		handler.DoctorLoginHandler(w, r)
+	case strings.HasPrefix(p, "/api/get"):
+		handler.DBHandler(w, r)
 	default:
 		http.ServeFile(w, r, "./public_html"+p)
 	}
