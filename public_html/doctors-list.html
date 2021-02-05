@@ -160,7 +160,7 @@
                                     <div class="col-8">
                                         <div class = "padding-top-10p">
                                             <p class = "f-bold f-18 no-margin-bottom">{{doc.name}}</p>
-                                            <p>{{doc.spec}}</p>
+                                            <p>{{doc.specid}}</p>
                                             <div class = "flex">
                                                 <p class = "bottom-offset left-padding blue-text">
                                                     <i v-for="index in doc.stars" class="fas fa-star icon-line-align"></i>
@@ -519,7 +519,7 @@
                 this.doctors = [{id: 0, name: "yes"}, {id: 1, name: "no"}];
             },
 
-            read(ids) {
+            readSingle(ids) {
                 console.log(ids);
                 for(let i = 0; i < ids.length; i++) {
                     var req = 'http://localhost:8000/api/get/' + ids[i]
@@ -530,6 +530,18 @@
                         }
                     ).catch((err) => console.error(err));
                 }
+            },
+
+            readBatch(id) {
+                console.log(id);
+                var req = 'http://localhost:8000/api/spec/' + id
+                console.log(req)
+                axios.get(req).then(
+                    response => {
+                    this.doctors = response.data;
+                    }
+                ).catch((err) => console.error(err));
+                
             },
 
             getQueryVariable(variable) {
@@ -571,8 +583,12 @@
             }
             },
             mounted() {
-                this.read(this.getQueryVariable('id'));
-                console.log(this.doctors);
+                var ids = this.getQueryVariable('id');
+                if (ids != undefined) {
+                    this.readSingle(ids);
+                } else {
+                    this.readBatch(this.getQueryVariable('spec'))
+                }
             }
         })
     </script>

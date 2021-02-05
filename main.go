@@ -30,6 +30,8 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 		handler.DoctorLoginHandler(w, r)
 	case strings.HasPrefix(p, "/api/get"):
 		handler.DBHandler(w, r)
+	case strings.HasPrefix(p, "/api/spec"):
+		handler.SpecHandler(w, r)
 	case strings.HasPrefix(p, "/api/edit"):
 		handler.ProfileEditHandler(w, r)
 	default:

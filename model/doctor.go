@@ -2,7 +2,7 @@ package model
 
 type Doctor struct {
 	Name       string `json:"name"`
-	SpecID     string `json:"spec"`
+	SpecID     string `json:"specid"`
 	Avatar     string `json:"avatar"`
 	Password   string `json:"password"`
 	Number     string `json:"number"`
