@@ -89,7 +89,7 @@
                             <div class="col-8 text-center white-text">
                                 <img class="row doctor-profile-pic round-pic auto-margin" v-bind:src="doctors.avatar" alt="">
                                 <p class="f-bold top-offset f-18 bottom-offset">{{doctors.name}}</p>
-                                <p class="bottom-offset">{{doctors.specid}}</p>
+                                <p class="bottom-offset">{{doctors.spec}}</p>
                                 <p class="f-16 bottom-offset-more">شماره نظام پزشکی: {{doctors.number}}</p>
                             </div>
                             <div class="col-2">
@@ -950,6 +950,25 @@
 
             },
 
+            specIdMapper(id) {
+                switch(id) {
+                    case "1":
+                        return "مغز و اعصاب";
+                    case "2":
+                        return "گوش، حلق و بینی"
+                    case "3":
+                        return "داخلی"
+                    case "4":
+                        return "زنان و زایمان"
+                    case "5":
+                        return "پوست و مو"
+                    case "6":
+                        return "اورولوژی"
+                    default:
+                        return "ارتوپدی"
+                }
+            },
+
             read(id) {
                 var s = document.getElementById("doctor-spec");
                 var slink = document.getElementById("doctor-spec-link");
@@ -961,8 +980,9 @@
                 axios.get(url).then(
                 response => {
                 this.doctors = response.data;
-                s.innerHTML = response.data.specid;
-                slink.setAttribute("href", "doctors-list.html?spec=3")
+                this.doctors.spec = this.specIdMapper(response.data.specid)
+                s.innerHTML = this.doctors.spec;
+                slink.setAttribute("href", "doctors-list.html?spec=" + response.data.specid)
                 document.title = "صفحه دکتر" + response.data.name;
                 n.innerHTML = response.data.name;
                 }

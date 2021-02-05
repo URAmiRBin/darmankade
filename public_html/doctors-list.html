@@ -52,8 +52,8 @@
                     درمانکده <i class="fas fa-arrow-left icon-line-align"></i>
                 </span>
             </a>
-            <p class = "fade-gray f-16">
-                متخصص مغز و اعصاب(نورولوژی)
+            <p id="spec-name" class = "fade-gray f-16">
+                متخصص
             </p>
         </div>
         <div class="row fourside-padding-5 white-text blue-bg rounded-15p bottom-offset-more">
@@ -160,7 +160,7 @@
                                     <div class="col-8">
                                         <div class = "padding-top-10p">
                                             <p class = "f-bold f-18 no-margin-bottom">{{doc.name}}</p>
-                                            <p>{{doc.specid}}</p>
+                                            <p>{{ specIdMapper(doc.specid) }}</p>
                                             <div class = "flex">
                                                 <p class = "bottom-offset left-padding blue-text">
                                                     <i v-for="index in doc.stars" class="fas fa-star icon-line-align"></i>
@@ -519,6 +519,25 @@
                 this.doctors = [{id: 0, name: "yes"}, {id: 1, name: "no"}];
             },
 
+            specIdMapper(id) {
+                switch(id) {
+                    case "1":
+                        return "مغز و اعصاب"
+                    case "2":
+                        return "گوش، حلق و بینی"
+                    case "3":
+                        return "داخلی"
+                    case "4":
+                        return "زنان و زایمان"
+                    case "5":
+                        return "پوست و مو"
+                    case "6":
+                        return "اورولوژی"
+                    default:
+                        return "ارتوپدی"
+                }
+            },
+
             readSingle(ids) {
                 console.log(ids);
                 for(let i = 0; i < ids.length; i++) {
@@ -533,7 +552,7 @@
             },
 
             readBatch(id) {
-                console.log(id);
+                document.getElementById("spec-name").innerHTML = this.specIdMapper(id[0]);
                 var req = 'http://localhost:8000/api/spec/' + id
                 console.log(req)
                 axios.get(req).then(
@@ -587,7 +606,7 @@
                 if (ids != undefined) {
                     this.readSingle(ids);
                 } else {
-                    this.readBatch(this.getQueryVariable('spec'))
+                    this.readBatch(this.getQueryVariable('spec'));
                 }
             }
         })
