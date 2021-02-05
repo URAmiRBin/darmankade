@@ -20,8 +20,10 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 	switch {
 	case p == "/":
 		handler.IndexHandler(w, r)
-	case p == "/login.html":
+	case p == "/login":
 		handler.LoginHandler(w, r)
+	case p == "/profile":
+		handler.ProfileHandler(w, r)
 	case p == "/register.html":
 		handler.RegisterHandler(w, r)
 	case p == "/doctor-register.html":

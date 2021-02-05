@@ -2,7 +2,6 @@ package handler
 
 import (
 	"context"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -13,10 +12,18 @@ import (
 )
 
 func ProfileEditHandler(w http.ResponseWriter, r *http.Request) {
-	username, _ := r.URL.Query()["u"]
-	firstname, _ := r.URL.Query()["f"]
-	lastname, _ := r.URL.Query()["l"]
-	phone, _ := r.URL.Query()["p"]
+	username, err := r.Cookie("username")
+	if err != nil {
+		p := model.NotFoundPage{Title: "No Cookies found", HelpTitle: "Login", HelpLink: "/login.html"}
+		t, _ := template.ParseFiles("./public_html/404.html")
+		t.Execute(w, p)
+		return
+	}
+
+	firstname := r.FormValue("f")
+	lastname := r.FormValue("l")
+	phone := r.FormValue("p")
+	password := r.FormValue("pass")
 
 	collection, err := db.GetCollection("users")
 	if err != nil {
@@ -24,20 +31,27 @@ func ProfileEditHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	filter := bson.D{{"username", username[0]}}
+	var user model.Patient
+	err = collection.FindOne(context.TODO(), bson.D{{"username", username.Value}}).Decode(&user)
+	if user.Password != password {
+		p := model.NotFoundPage{Title: "Wrong confirmation", HelpTitle: "Login", HelpLink: "/login.html"}
+		t, _ := template.ParseFiles("./public_html/404.html")
+		t.Execute(w, p)
+		return
+	}
+
+	filter := bson.D{{"username", username.Value}}
 	var set bson.D
 
-	if firstname[0] != "" {
-		set = append(set, bson.E{"firstname", firstname[0]})
+	if firstname != "" {
+		set = append(set, bson.E{"firstname", firstname})
 	}
-	if phone[0] != "" {
-		set = append(set, bson.E{"phone", phone[0]})
+	if phone != "" {
+		set = append(set, bson.E{"phone", phone})
 	}
-	if lastname[0] != "" {
-		set = append(set, bson.E{"lastname", lastname[0]})
+	if lastname != "" {
+		set = append(set, bson.E{"lastname", lastname})
 	}
-
-	fmt.Println(set)
 
 	_, dberr := collection.UpdateOne(context.TODO(), filter, bson.D{{"$set", set}})
 	if dberr != nil {

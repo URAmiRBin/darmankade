@@ -1,10 +1,13 @@
 <h1>WELCOME</h1>
 <h1>{{ .Username }}</h1>
-<form action="http://localhost:8000/api/edit">
+<form action="http://localhost:8000/api/edit" method="POST">
+    <label for="p">Phone</label>
     <input type="text" name = "p"     placeholder={{ .Phone }} >
-    <input type="text" name = "f" placeholder={{ .Firstname }}>
-    <input type="text" name = "l"  placeholder={{ .Lastname }}>
-    <p>confirm username</p>
-    <input type="text" placeholder={{ .Username }} name = "u" >
+    <label for="f">Firstname</label>
+    <input type="text" name = "f" placeholder={{ .Firstname }} >
+    <label for="l">Lastname</label>
+    <input type="text" name = "l"  placeholder={{ .Lastname }} >
+    <p>confirm password</p>
+    <input type="password" name = "pass" >
     <button type="submit">CHANGE</button>
 </form>
