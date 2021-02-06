@@ -1,6 +1,6 @@
 <h1>WELCOME</h1>
 <h1>{{ .Username }}</h1>
-<form action="http://localhost:8000/api/edit" method="POST">
+<form action="/edit" method="POST">
     <label for="p">Phone</label>
     <input type="text" name = "p"     placeholder={{ .Phone }} >
     <label for="f">Firstname</label>
