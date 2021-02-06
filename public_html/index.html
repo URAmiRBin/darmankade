@@ -44,7 +44,7 @@
                     <p class = "wide white-text f-32">درمانکده - مشاوره آنلاین و حضوری</p>
                 </div>
                 <div class = "row-flex">
-                    <form class = "search-box">
+                    <form class = "search-box" action="/search" method="GET">
                         <input name = "id" type="text" class = "search-input" placeholder="نام پزشک، تخصص یا محله مورد نظر را تایپ کنید">
                         <div id="search-suggestion">
                             <div id = "suggestion-header">
@@ -73,7 +73,7 @@
                                 </ul>
                             </div>
                         </button>
-                        <button class = "search-btn">
+                        <button type="submit" class = "search-btn">
                             جستجو
                         </button>
                     </form>

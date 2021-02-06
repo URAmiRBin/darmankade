@@ -22,14 +22,14 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 	switch {
 	case p == "/":
 		handler.IndexHandler(w, r)
+	case p == "/search":
+		handler.SearchHandler(w, r)
 	case p == "/login":
 		handler.LoginHandler(w, r)
 	case p == "/profile":
 		handler.ProfileHandler(w, r)
 	case p == "/register":
 		handler.RegisterHandler(w, r)
-	case p == "/doctor-login.html":
-		handler.DoctorLoginHandler(w, r)
 	case strings.HasPrefix(p, "/api/get"):
 		api.DoctorApi(w, r)
 	case strings.HasPrefix(p, "/api/spec"):
