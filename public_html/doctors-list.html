@@ -163,11 +163,11 @@
                                             <p>{{ specIdMapper(doc.specid) }}</p>
                                             <div class = "flex">
                                                 <p class = "bottom-offset left-padding blue-text">
-                                                    <i v-for="index in doc.stars" class="fas fa-star icon-line-align"></i>
+                                                    <i v-for="index in ceil(doc.average)" class="fas fa-star icon-line-align"></i>
                                                 </p>
                                                 <p class = "f-12 fade-gray">({{doc.comments}} نظر)</p>
                                             </div>
-                                            <p class = "fade-gray f-16">{{doc.comment_text}}</p>
+                                            <p class = "fade-gray f-16">{{doc.latest_comment}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -517,6 +517,14 @@
 
             simplefill() {
                 this.doctors = [{id: 0, name: "yes"}, {id: 1, name: "no"}];
+            },
+
+            ceil(num) {
+                return Math.ceil(num)
+            },
+
+            twoPoint(num) {
+                return num.toFixed(1)
             },
 
             specIdMapper(id) {

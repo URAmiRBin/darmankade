@@ -122,15 +122,19 @@ func DoctorRegisterHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	doctor := model.Doctor{Name: username,
-		SpecID:     specId,
-		Avatar:     avatar,
-		Password:   password,
-		Number:     number,
-		Online:     online_pay,
-		Experience: xp,
-		Address:    address,
-		Phone:      phone,
-		Weekdays:   days,
+		SpecID:           specId,
+		Avatar:           avatar,
+		Password:         password,
+		Number:           number,
+		Online:           online_pay,
+		Experience:       xp,
+		Address:          address,
+		Phone:            phone,
+		Weekdays:         days,
+		Comments:         0,
+		Latest_Comment:   "نظری وجود ندارد",
+		Latest_Commenter: "",
+		Average:          float64(0),
 	}
 
 	collection, err := db.GetCollection("doctors")

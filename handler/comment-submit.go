@@ -2,6 +2,7 @@ package handler
 
 import (
 	"context"
+	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -42,7 +43,31 @@ func SubmitCommentHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	collection2, err := db.GetCollection("doctors")
+	if err != nil {
+		log.Fatal(err)
+	}
 	doc_id := strings.Split(r.Referer(), "=")[1]
+	fmt.Println(doc_id)
+	var doctor model.Doctor
+	err = collection2.FindOne(context.TODO(), bson.D{primitive.E{Key: "number", Value: doc_id}}).Decode(&doctor)
+	if err != nil {
+		log.Fatal(err)
+	}
+	var avg float64
+	avg = ((doctor.Average * float64(doctor.Comments)) + float64(stars)) / (float64(doctor.Comments) + 1)
+	filter := bson.D{primitive.E{Key: "number", Value: doc_id}}
+	set := bson.D{
+		primitive.E{Key: "comments", Value: doctor.Comments + 1},
+		primitive.E{Key: "latest_comment", Value: desc},
+		primitive.E{Key: "latest_commenter", Value: user.Firstname},
+		primitive.E{Key: "average", Value: avg},
+	}
+	_, dberr := collection2.UpdateOne(context.TODO(), filter, bson.D{primitive.E{Key: "$set", Value: set}})
+	if dberr != nil {
+		log.Fatal(err)
+		return
+	}
 
 	comments, err := db.GetCollection("comments")
 	_, err = comments.InsertOne(context.TODO(), bson.D{

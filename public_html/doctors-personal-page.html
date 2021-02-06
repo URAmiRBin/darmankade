@@ -234,10 +234,10 @@
                         <div class="col-2">
                             <div class="card no-border col-8 auto-margin light-blue-bg text-center">
                                 <p class="blue-text f-32 f-bold top-offset-less no-margin-bottom">
-                                    {{doctors.rate}}
+                                    {{twoPoint(doctors.average)}}
                                 </p>
                                 <p class="blue-text no-margin-bottom f-10">
-                                    <i v-for="index in doctors.stars" class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
+                                    <i v-for="index in ceil(doctors.average)" class="fas no-left-padding no-right-padding fa-star icon-line-align"></i>
                                 </p>
                                 <p class="fade-gray f-16 no-margin-bottom">
                                     از {{doctors.comments}} نظر
@@ -247,10 +247,10 @@
                         <div class="col-10 right-padding">
                             <p class="fade-gray">
                                 <i class="fas fa-comment left-padding"></i>
-                                نظر {{doctors.commenter}}:
+                                نظر {{doctors.latest_commenter}}:
                             </p>
                             <p class="no-margin-bottom">
-                                {{doctors.comment_text}}
+                                {{doctors.latest_comment}}
                             </p>
                             <div id="comment-bullets" class="top-offset">
                                 <p class="no-margin-bottom text-center">
@@ -327,7 +327,7 @@
                             </svg>
                         </div>
                         <div class="col-11">
-                            <p class="no-margin-bottom f-bold">نظرات کاربران (تعداد کل نظرات :۴۹)</p>
+                            <p class="no-margin-bottom f-bold">نظرات کاربران (تعداد کل نظرات :{{doctors.comments}})</p>
                             <p class="no-margin-bottom f-16 fade-gray">در این قسمت شما می توانید تجربه مراجعه کاربران
                                 دیگر به مطب آقای دکتر مهران جلالی را بخوانید.</p>
                         </div>
@@ -505,7 +505,7 @@
                             
                         </div>
 
-                        <form action="/api/submit-comment" method="POST">
+                        <form action="/submit-comment" method="POST">
                             <div class="flex">
                                 <label for="reason">دلیل مراجعه</label>
                                 <input name = "reason" type="text">
@@ -767,6 +767,14 @@
                     }
                 }
 
+            },
+
+            ceil(num) {
+                return Math.ceil(num)
+            },
+
+            twoPoint(num) {
+                return num.toFixed(1)
             },
 
             specIdMapper(id) {
