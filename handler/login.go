@@ -11,6 +11,7 @@ import (
 	"github.com/URAmiRBin/darmankade/db"
 	"github.com/URAmiRBin/darmankade/model"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func LoginHandler(w http.ResponseWriter, r *http.Request) {
@@ -27,7 +28,7 @@ func UserLoginHandler(w http.ResponseWriter, r *http.Request) {
 
 	collection, _ := db.GetCollection("users")
 	var result model.Patient
-	err := collection.FindOne(context.TODO(), bson.D{{"username", username}}).Decode(&result)
+	err := collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "username", Value: username}}).Decode(&result)
 	if err != nil || password != result.Password {
 		p := model.NotFoundPage{Title: "رمز عبور اشتباه وارد شده است", HelpTitle: "ثبت نام کنید", HelpLink: "/register.html"}
 		t, _ := template.ParseFiles("./public_html/404.html")
@@ -51,7 +52,7 @@ func DoctorLoginHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var result model.Doctor
-	err = collection.FindOne(context.TODO(), bson.D{{"number", doctor.Number}}).Decode(&result)
+	err = collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "number", Value: doctor.Number}}).Decode(&result)
 	if err != nil {
 		p := model.NotFoundPage{Title: "نام کاربری اشتباه وارد شده است", HelpTitle: "ثبت نام کنید", HelpLink: "/register.html"}
 		t, _ := template.ParseFiles("./public_html/404.html")

@@ -11,6 +11,7 @@ import (
 	"github.com/URAmiRBin/darmankade/db"
 	"github.com/URAmiRBin/darmankade/model"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func SubmitCommentHandler(w http.ResponseWriter, r *http.Request) {
@@ -33,7 +34,7 @@ func SubmitCommentHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var user model.Patient
-	err = collection.FindOne(context.TODO(), bson.D{{"username", username.Value}}).Decode(&user)
+	err = collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "username", Value: username.Value}}).Decode(&user)
 	if err != nil {
 		p := model.NotFoundPage{Title: "Invalid username", HelpTitle: "Login", HelpLink: "/login.html"}
 		t, _ := template.ParseFiles("./public_html/404.html")
@@ -45,16 +46,16 @@ func SubmitCommentHandler(w http.ResponseWriter, r *http.Request) {
 
 	comments, err := db.GetCollection("comments")
 	_, err = comments.InsertOne(context.TODO(), bson.D{
-		{"firstname", user.Firstname},
-		{"doctor_id", doc_id},
-		{"reason", reason},
-		{"desc", desc},
-		{"stars", stars},
-		{"likes", 0},
-		{"date", bson.D{
-			{"year", 1970},
-			{"month", 1},
-			{"day", 1},
+		primitive.E{Key: "firstname", Value: user.Firstname},
+		primitive.E{Key: "doctor_id", Value: doc_id},
+		primitive.E{Key: "reason", Value: reason},
+		primitive.E{Key: "desc", Value: desc},
+		primitive.E{Key: "stars", Value: stars},
+		primitive.E{Key: "likes", Value: 0},
+		primitive.E{Key: "date", Value: bson.D{
+			primitive.E{Key: "year", Value: 1970},
+			primitive.E{Key: "month", Value: 1},
+			primitive.E{Key: "day", Value: 1},
 		},
 		},
 	})

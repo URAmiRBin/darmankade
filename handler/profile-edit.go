@@ -9,6 +9,7 @@ import (
 	"github.com/URAmiRBin/darmankade/db"
 	"github.com/URAmiRBin/darmankade/model"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func ProfileEditHandler(w http.ResponseWriter, r *http.Request) {
@@ -32,7 +33,7 @@ func ProfileEditHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var user model.Patient
-	err = collection.FindOne(context.TODO(), bson.D{{"username", username.Value}}).Decode(&user)
+	err = collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "username", Value: username.Value}}).Decode(&user)
 	if user.Password != password {
 		p := model.NotFoundPage{Title: "Wrong confirmation", HelpTitle: "Login", HelpLink: "/login.html"}
 		t, _ := template.ParseFiles("./public_html/404.html")
@@ -40,20 +41,20 @@ func ProfileEditHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	filter := bson.D{{"username", username.Value}}
+	filter := bson.D{primitive.E{Key: "username", Value: username.Value}}
 	var set bson.D
 
 	if firstname != "" {
-		set = append(set, bson.E{"firstname", firstname})
+		set = append(set, bson.E{Key: "firstname", Value: firstname})
 	}
 	if phone != "" {
-		set = append(set, bson.E{"phone", phone})
+		set = append(set, bson.E{Key: "phone", Value: phone})
 	}
 	if lastname != "" {
-		set = append(set, bson.E{"lastname", lastname})
+		set = append(set, bson.E{Key: "lastname", Value: lastname})
 	}
 
-	_, dberr := collection.UpdateOne(context.TODO(), filter, bson.D{{"$set", set}})
+	_, dberr := collection.UpdateOne(context.TODO(), filter, bson.D{primitive.E{Key: "$set", Value: set}})
 	if dberr != nil {
 		log.Fatal(err)
 		return

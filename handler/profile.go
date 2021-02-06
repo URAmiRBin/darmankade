@@ -8,6 +8,7 @@ import (
 	"github.com/URAmiRBin/darmankade/db"
 	"github.com/URAmiRBin/darmankade/model"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func ProfileHandler(w http.ResponseWriter, r *http.Request) {
@@ -21,7 +22,7 @@ func ProfileHandler(w http.ResponseWriter, r *http.Request) {
 
 	collection, _ := db.GetCollection("users")
 	var result model.Patient
-	err = collection.FindOne(context.TODO(), bson.D{{"username", c.Value}}).Decode(&result)
+	err = collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "username", Value: c.Value}}).Decode(&result)
 	if err != nil {
 		p := model.NotFoundPage{Title: "User does not exist", HelpTitle: "Remove cookies or register", HelpLink: "/register.html"}
 		t, _ := template.ParseFiles("./public_html/404.html")

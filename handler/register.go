@@ -14,6 +14,7 @@ import (
 	"github.com/URAmiRBin/darmankade/db"
 	"github.com/URAmiRBin/darmankade/model"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func RegisterHandler(w http.ResponseWriter, r *http.Request) {
@@ -45,7 +46,7 @@ func PatientRegisterHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var temp model.Patient
-	err = collection.FindOne(context.TODO(), bson.D{{"username", patient.Username}}).Decode(&temp)
+	err = collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "username", Value: patient.Username}}).Decode(&temp)
 	if err != nil {
 		// No user found with this username, can register
 		_, err = collection.InsertOne(context.TODO(), patient)
@@ -140,7 +141,7 @@ func DoctorRegisterHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var result model.Doctor
-	err = collection.FindOne(context.TODO(), bson.D{{"number", doctor.Number}}).Decode(&result)
+	err = collection.FindOne(context.TODO(), bson.D{primitive.E{Key: "number", Value: doctor.Number}}).Decode(&result)
 	if err != nil {
 		_, err = collection.InsertOne(context.TODO(), doctor)
 		if err != nil {

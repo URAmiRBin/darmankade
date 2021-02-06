@@ -28,7 +28,7 @@ func SearchHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var result []model.Doctor
-	filter := bson.D{{"name", primitive.Regex{Pattern: query[0], Options: ""}}}
+	filter := bson.D{primitive.E{Key: "name", Value: primitive.Regex{Pattern: query[0], Options: ""}}}
 
 	cur, err := collection.Find(context.Background(), filter)
 	if err != nil {
