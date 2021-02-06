@@ -6,12 +6,14 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/URAmiRBin/darmankade/api"
+	"github.com/URAmiRBin/darmankade/config"
 	"github.com/URAmiRBin/darmankade/handler"
 )
 
 func main() {
 	http.HandleFunc("/", serveFiles)
-	log.Fatal(http.ListenAndServe(":8000", nil))
+	log.Fatal(http.ListenAndServe(":"+config.Port, nil))
 }
 
 func serveFiles(w http.ResponseWriter, r *http.Request) {
@@ -29,14 +31,14 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 	case p == "/doctor-login.html":
 		handler.DoctorLoginHandler(w, r)
 	case strings.HasPrefix(p, "/api/get"):
-		handler.DBHandler(w, r)
+		api.DoctorApi(w, r)
 	case strings.HasPrefix(p, "/api/spec"):
-		handler.SpecHandler(w, r)
-	case strings.HasPrefix(p, "/api/edit"):
-		handler.ProfileEditHandler(w, r)
+		api.SpecApi(w, r)
 	case strings.HasPrefix(p, "/api/comments"):
-		handler.CommentHandler(w, r)
-	case strings.HasPrefix(p, "/api/submit-comment"):
+		api.CommentApi(w, r)
+	case strings.HasPrefix(p, "/edit"):
+		handler.ProfileEditHandler(w, r)
+	case strings.HasPrefix(p, "/submit-comment"):
 		handler.SubmitCommentHandler(w, r)
 	default:
 		http.ServeFile(w, r, "./public_html"+p)

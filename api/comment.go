@@ -1,4 +1,4 @@
-package handler
+package api
 
 import (
 	"context"
@@ -13,7 +13,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func CommentHandler(w http.ResponseWriter, r *http.Request) {
+func CommentApi(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	urlParts := strings.Split(r.URL.Path, "/")
 	number := urlParts[len(urlParts)-1]
