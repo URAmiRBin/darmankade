@@ -458,7 +458,7 @@
                             </div>
                         </div>
 
-                        <div class="card bottom-offset">
+                        <div v-for="comment in comments" class="card bottom-offset">
                             <div class="row-flex bottom-offset fourside-padding-5 light-grey-bg no-bottom-border-radius">
                                 <div class="col-1 text-center top-offset-less vertical-center">
                                     <i class="fas fa-user icon-line-align"></i>
@@ -466,7 +466,7 @@
                                 </div>
                                 <div class="col-10 vertical-center">
                                     <p class="no-margin-bottom fade-gray">
-                                        نظر حسین در تاریخ ۰۳ تیر ۱۳۹۸
+                                        نظر {{comment.firstname}} در تاریخ {{comment.date.day}} {{months[comment.date.month - 1]}} {{comment.date.year}}
                                     </p>
                                 </div>
                                 <div class="col-1 dark-green left-padding">
@@ -477,7 +477,7 @@
                                     </div>
                                     <div class="row">
                                         <p class = "ltr no-margin-bottom">
-                                            ۴
+                                            {{comment.likes}}
                                         </p>
                                     </div>
                                 </div>
@@ -489,225 +489,42 @@
                                     <p>امتیاز به پزشک</p>
                                 </div>
                                 <div class="col-3">
-                                    <p class = "fade-gray">سردرد</p>
+                                    <p class = "fade-gray">{{comment.reason}}</p>
                                     <p class = "f-16 blue-text">
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
+                                        <i v-for="index in comment.stars" class="fas fa-star icon-line-align"></i>
+                                        
 
                                     </p>
                                 </div>
                                 <div class="col-7 left-padding">
                                     <p class = "fade-black">
-                                        بسیار خوب و با آرامش پذیرای بیمار هستن و حتی برای سوال راجع به بیماری نوعی میپرسن که احتمال ناراحتی رو به بیمار ندن . و خیلی خوشحال هستم که دستگاه نوار مغز رو در مطب شون دارن و از سرگردان شدن بیمار در کوچه و خیابان جلوگیری میکنند.
+                                        {{comment.desc}}
                                     </p>
                                 </div>
                             </div>
                             
                         </div>
 
-
-                        <div class="card bottom-offset">
-                            <div class="row-flex bottom-offset fourside-padding-5 light-grey-bg no-bottom-border-radius">
-                                <div class="col-1 text-center top-offset-less vertical-center">
-                                    <i class="fas fa-user icon-line-align"></i>
-
-                                </div>
-                                <div class="col-10 vertical-center">
-                                    <p class="no-margin-bottom fade-gray">
-                                        نظر امیر در تاریخ ۰۴ تیر ۱۳۹۸
-                                    </p>
-                                </div>
-                                <div class="col-1 dark-green left-padding">
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            <i class="fas fa-thumbs-up icon-line-align"></i>
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            ۷
-                                        </p>
-                                    </div>
-                                </div>
+                        <form action="/api/submit-comment" method="POST">
+                            <div class="flex">
+                                <label for="reason">دلیل مراجعه</label>
+                                <input name = "reason" type="text">
+                                <label for="stars">امتیاز</label>
+                                <select name="stars">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
                             </div>
-
-                            <div class="row-flex">
-                                <div class="col-2 f-bold right-padding">
-                                    <p class = "bottom-offset">علت مراجعه</p>
-                                    <p>امتیاز به پزشک</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class = "fade-gray">---</p>
-                                    <p class = "f-16 blue-text">
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-
-                                    </p>
-                                </div>
-                                <div class="col-7 left-padding">
-                                    <p class = "fade-black">
-                                        از طریق یکی از دوستان با آقای دکتر آشنا شدم و به ایشون مراجعه کردم خیلی برای بیمار وقت میذارن و به بهترین نحو جواب سوالات بیمار رامیدن،فعلا نوار مغز گرفتن سی تی اسکن هم باید انجام بدم و برای دکتر ببرم اون موقع میتونم درباره تشخیص و درمان آقای دکتر نظر بدم،                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
+                            <label for="desc">نظر</label>
+                            <textarea name="desc" cols="30" rows="10"></textarea>
+                            <input type="submit">
+                        </form>
 
 
-                        <div class="card bottom-offset">
-                            <div class="row-flex bottom-offset fourside-padding-5 light-grey-bg no-bottom-border-radius">
-                                <div class="col-1 text-center top-offset-less vertical-center">
-                                    <i class="fas fa-user icon-line-align"></i>
-
-                                </div>
-                                <div class="col-10 vertical-center">
-                                    <p class="no-margin-bottom fade-gray">
-                                        نظر مجتبی در تاریخ ۰۳ تیر ۱۳۹۹
-                                    </p>
-                                </div>
-                                <div class="col-1 dark-green left-padding">
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            <i class="fas fa-thumbs-up icon-line-align"></i>
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            ۴
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row-flex">
-                                <div class="col-2 f-bold right-padding">
-                                    <p class = "bottom-offset">علت مراجعه</p>
-                                    <p>امتیاز به پزشک</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class = "fade-gray">---</p>
-                                    <p class = "f-16 blue-text">
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-
-                                    </p>
-                                </div>
-                                <div class="col-7 left-padding">
-                                    <p class = "fade-black">
-                                        عالی عالی به نظرم آقای دکتر جلالی بهترین دکتری که من دیدم هم از نظر معاینه کردن و تحویل گرفتن و رفتار خوبشون با کل مریض هایی که باهام بودن و از خداوند ارزوی موفقیت در کارهایشان هم خود و هم منشی محترمشان                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-
-                        <div class="card bottom-offset">
-                            <div class="row-flex bottom-offset fourside-padding-5 light-grey-bg no-bottom-border-radius">
-                                <div class="col-1 text-center top-offset-less vertical-center">
-                                    <i class="fas fa-user icon-line-align"></i>
-
-                                </div>
-                                <div class="col-10 vertical-center">
-                                    <p class="no-margin-bottom fade-gray">
-                                        نظر حمید در تاریخ ۰۳ مرداد ۱۳۹۸
-                                    </p>
-                                </div>
-                                <div class="col-1 dark-green left-padding">
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            <i class="fas fa-thumbs-up icon-line-align"></i>
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            ۷
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row-flex">
-                                <div class="col-2 f-bold right-padding">
-                                    <p class = "bottom-offset">علت مراجعه</p>
-                                    <p>امتیاز به پزشک</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class = "fade-gray">احساس ضعف</p>
-                                    <p class = "f-16 blue-text">
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-
-                                    </p>
-                                </div>
-                                <div class="col-7 left-padding">
-                                    <p class = "fade-black">
-                                        خیلی عالی بود و برخورد خیلی خوبی با من داشتند. وقت گذاشتند وبه خوبی به صحبت های من گوش نمودند وعاینه دقیقی انجام دادند و راهنمایی های خوبی برای برطرف نمودن مشکل به من ارائه نمودند.                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-
-
-                        <div class="card bottom-offset">
-                            <div class="row-flex bottom-offset fourside-padding-5 light-grey-bg no-bottom-border-radius">
-                                <div class="col-1 text-center top-offset-less vertical-center">
-                                    <i class="fas fa-user icon-line-align"></i>
-
-                                </div>
-                                <div class="col-10 vertical-center">
-                                    <p class="no-margin-bottom fade-gray">
-                                        نظر وجید در تاریخ ۱۰ تیر ۱۳۹۸
-                                    </p>
-                                </div>
-                                <div class="col-1 dark-green left-padding">
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            <i class="fas fa-thumbs-up icon-line-align"></i>
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <p class = "ltr no-margin-bottom">
-                                            ۴
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row-flex">
-                                <div class="col-2 f-bold right-padding">
-                                    <p class = "bottom-offset">علت مراجعه</p>
-                                    <p>امتیاز به پزشک</p>
-                                </div>
-                                <div class="col-3">
-                                    <p class = "fade-gray">پیگیری روند درمان
-                                    </p>
-                                    <p class = "f-16 blue-text">
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-                                        <i class="fas fa-star icon-line-align"></i>
-
-                                    </p>
-                                </div>
-                                <div class="col-7 left-padding">
-                                    <p class = "fade-black">
-                                        جواب ام آرآی را که خود آقای دکتر برام نوشته بودن ، بردم خدمتشون و خداروشکر مشکل خاصی نداشتم. در مجموع تشخیص درستی دادند و کلی انرژی ازشون گرفتم. عالی هستند آقای دکتر جلالی                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
+                        
                     </div>
                     
 
@@ -911,6 +728,8 @@
                 return {
                     "selected-tab": 1,
                     "doctors": [],
+                    "comments": [],
+                    "months": ["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان","آذر","دی","بهمن","اسفند"],
                     "weekdays": ["شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه"]
                 }
             },
@@ -986,8 +805,14 @@
                 document.title = "صفحه دکتر" + response.data.name;
                 n.innerHTML = response.data.name;
                 }
-            ).catch((err) => console.error(err));
+                ).catch((err) => console.error(err));
 
+                axios.get('http://localhost:8000/api/comments/' + id).then(
+                    response => {
+                        this.comments = response.data;
+                        console.log(this.comments[0].desc)
+                    }
+                )
                 
             
             },

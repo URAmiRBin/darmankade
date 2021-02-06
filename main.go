@@ -36,6 +36,10 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 		handler.SpecHandler(w, r)
 	case strings.HasPrefix(p, "/api/edit"):
 		handler.ProfileEditHandler(w, r)
+	case strings.HasPrefix(p, "/api/comments"):
+		handler.CommentHandler(w, r)
+	case strings.HasPrefix(p, "/api/submit-comment"):
+		handler.SubmitCommentHandler(w, r)
 	default:
 		http.ServeFile(w, r, "./public_html"+p)
 	}
