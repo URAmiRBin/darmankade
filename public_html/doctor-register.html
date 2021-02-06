@@ -19,13 +19,14 @@
             </div>
         </div>
         <div class = "col-66 white-alt-bg max-height center-center">
-            <form class ="col-50 text-center">
+            <form class ="col-50 text-center" action="/register" method="POST" enctype="multipart/form-data">
                 <p class = "f-bold fade-black bottom-offset-lot">برای ثبت نام اطلاعات خود را وارد کنید.</p>
-                <input type="text" class = "bottom-offset-more" name="username" placeholder="نام" required>
+                <input type="text" class = "bottom-offset-more" name="username" placeholder="نام و نام خانوادگی" required>
                 <input type="text" class = "bottom-offset-more" name="phone" placeholder="تلفن" required>    
                 <input type="text" class = "row-flex bottom-offset-more" name="address" placeholder="آدرس" required>
                 <input type="text" class = "row-flex bottom-offset-more" name="xp" placeholder="تجربه" required>
                 <input type="text" class = "row-flex bottom-offset-more" name="number" placeholder="شماره نظام پزشکی" required>
+                <input type="file" accept="image/*" name="avatar">
                 <input type="password" class = "row-flex bottom-offset-more" name="password" placeholder="رمز عبور" required minlength="8">
                 <select name="spec">
                     <option value="1">مغز و اعصاب</option>

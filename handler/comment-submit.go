@@ -2,7 +2,6 @@ package handler
 
 import (
 	"context"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
@@ -60,8 +59,10 @@ func SubmitCommentHandler(w http.ResponseWriter, r *http.Request) {
 		},
 	})
 	if err != nil {
-		fmt.Println("ERR")
+		p := model.NotFoundPage{Title: "Something bad happened", HelpTitle: "Home Page", HelpLink: "/"}
+		t, _ := template.ParseFiles("./public_html/404.html")
+		t.Execute(w, p)
 	} else {
-		fmt.Println("COMMENT ADDED")
+		http.Redirect(w, r, r.Referer(), http.StatusSeeOther)
 	}
 }

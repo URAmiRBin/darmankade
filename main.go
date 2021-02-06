@@ -24,10 +24,8 @@ func serveFiles(w http.ResponseWriter, r *http.Request) {
 		handler.LoginHandler(w, r)
 	case p == "/profile":
 		handler.ProfileHandler(w, r)
-	case p == "/register.html":
+	case p == "/register":
 		handler.RegisterHandler(w, r)
-	case p == "/doctor-register.html":
-		handler.DoctorRegisterHandler(w, r)
 	case p == "/doctor-login.html":
 		handler.DoctorLoginHandler(w, r)
 	case strings.HasPrefix(p, "/api/get"):
