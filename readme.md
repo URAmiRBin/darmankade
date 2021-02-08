@@ -16,3 +16,9 @@ Also I have to mention that, please don't resize your window, you'll regret it.
 ## Phase 2 : Interactions and Dynamic Content
 
 This phase was surprisingly easy. Some interactions like functional filters were added  using javascript and doctors pages (doctors-list.html and doctors-personal-page.html) were dynamically filled with api and vue.js
+
+## Phase 3 : Backend
+
+Backed of the site for login and registeration of users and doctors were implemented. I used Golang for this. Commenting and rating doctors were also added. To store the data I used MongoDB and implemented some APIs for retreiving json data. Frontend implementation was also changed and using AJAX most of the pages can be loaded dynamically.
+To make the website stateful, I just used simple cookies.
+
