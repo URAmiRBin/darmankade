@@ -239,6 +239,11 @@ body {
     justify-content: space-between;
 }
 
+.just-content {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .icon-line-align {
     padding-right: 5px;
     padding-top: 4px;
